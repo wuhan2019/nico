@@ -6,7 +6,7 @@ public class User {
     private String user_phone;
     private String user_name;
     private String user_sex;
-    private String user_passwoed;
+    private String user_password;
 
     public String getUser_phone() {
         return user_phone;
@@ -32,11 +32,11 @@ public class User {
         this.user_sex = user_sex;
     }
 
-    public String getUser_passwoed() {
-        return user_passwoed;
+    public String getUser_password() {
+        return user_password;
     }
 
-    public void setUser_passwoed(String user_passwoed) {
-        this.user_passwoed = user_passwoed;
+    public void setUser_password(String user_password) {
+        this.user_password = user_password;
     }
 }
