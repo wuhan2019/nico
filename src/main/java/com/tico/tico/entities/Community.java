@@ -6,7 +6,7 @@ import java.util.List;
 public class Community {
     private String community_user;
     private String community_context;
-    private List<Object> community_images;
+    private Object community_images;
     private int community_praise_count;
     private String community_title;
     private Date community_time;
@@ -27,11 +27,11 @@ public class Community {
         this.community_context = community_context;
     }
 
-    public List<Object> getCommunity_images() {
+    public Object getCommunity_images() {
         return community_images;
     }
 
-    public void setCommunity_images(List<Object> community_images) {
+    public void setCommunity_images(Object community_images) {
         this.community_images = community_images;
     }
 
