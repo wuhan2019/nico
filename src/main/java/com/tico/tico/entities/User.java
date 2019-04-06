@@ -8,6 +8,13 @@ public class User {
     private String user_sex;
     private String user_password;
 
+    public User(String user_phone, String user_name, String user_sex, String user_password) {
+        this.user_phone = user_phone;
+        this.user_name = user_name;
+        this.user_sex = user_sex;
+        this.user_password = user_password;
+    }
+
     public String getUser_phone() {
         return user_phone;
     }

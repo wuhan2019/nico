@@ -14,4 +14,10 @@ public class UserService {
     public List<User> getAll(){
         return userMapper.getAll();
     }
+    public String getPasswordByName(String name){
+        return userMapper.getPasswordByName(name);
+    }
+    public void putUser(User user){
+        userMapper.putUser(user);
+    }
 }
