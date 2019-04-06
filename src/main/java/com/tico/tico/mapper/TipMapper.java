@@ -3,6 +3,6 @@ package com.tico.tico.mapper;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface CommunityMapper {
-    void de();
+public interface TipMapper {
+     void de();
 }
