@@ -8,7 +8,7 @@ public class Comment2Peripheral {
     private Date comment_peripheral_time;
     private String comment_peripheral_context;
     private String comment_peripheral_replyto_name;
-    private int comment_peripheral_mark;
+    private double comment_peripheral_mark;
 
     public String getComment_peripheral_commentor() {
         return comment_peripheral_commentor;
@@ -50,7 +50,7 @@ public class Comment2Peripheral {
         this.comment_peripheral_replyto_name = comment_peripheral_replyto_name;
     }
 
-    public int getComment_peripheral_mark() {
+    public double getComment_peripheral_mark() {
         return comment_peripheral_mark;
     }
 

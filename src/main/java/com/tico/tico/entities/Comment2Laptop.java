@@ -8,12 +8,12 @@ public class Comment2Laptop {
     private Date comment_laptop_time;
     private String comment_laptop_context;
     private String comment_laptop_replyto_name;
-    private int comment_laptop_price_mark;
-    private int comment_laptop_screen_mark;
-    private int comment_laptop_workspeed_mark;
-    private int comment_laptop_battery_mark;
-    private int comment_laptop_radiation_mark;
-    private int comment_laptop_appearance_mark;
+    private double comment_laptop_price_mark;
+    private double comment_laptop_screen_mark;
+    private double comment_laptop_workspeed_mark;
+    private double comment_laptop_battery_mark;
+    private double comment_laptop_radiation_mark;
+    private double comment_laptop_appearance_mark;
 
     public String getComment_laptop_commentor() {
         return comment_laptop_commentor;
@@ -55,7 +55,7 @@ public class Comment2Laptop {
         this.comment_laptop_replyto_name = comment_laptop_replyto_name;
     }
 
-    public int getComment_laptop_price_mark() {
+    public double getComment_laptop_price_mark() {
         return comment_laptop_price_mark;
     }
 
@@ -63,7 +63,7 @@ public class Comment2Laptop {
         this.comment_laptop_price_mark = comment_laptop_price_mark;
     }
 
-    public int getComment_laptop_screen_mark() {
+    public double getComment_laptop_screen_mark() {
         return comment_laptop_screen_mark;
     }
 
@@ -71,7 +71,7 @@ public class Comment2Laptop {
         this.comment_laptop_screen_mark = comment_laptop_screen_mark;
     }
 
-    public int getComment_laptop_workspeed_mark() {
+    public double getComment_laptop_workspeed_mark() {
         return comment_laptop_workspeed_mark;
     }
 
@@ -79,7 +79,7 @@ public class Comment2Laptop {
         this.comment_laptop_workspeed_mark = comment_laptop_workspeed_mark;
     }
 
-    public int getComment_laptop_battery_mark() {
+    public double getComment_laptop_battery_mark() {
         return comment_laptop_battery_mark;
     }
 
@@ -87,7 +87,7 @@ public class Comment2Laptop {
         this.comment_laptop_battery_mark = comment_laptop_battery_mark;
     }
 
-    public int getComment_laptop_radiation_mark() {
+    public double getComment_laptop_radiation_mark() {
         return comment_laptop_radiation_mark;
     }
 
@@ -95,7 +95,7 @@ public class Comment2Laptop {
         this.comment_laptop_radiation_mark = comment_laptop_radiation_mark;
     }
 
-    public int getComment_laptop_appearance_mark() {
+    public double getComment_laptop_appearance_mark() {
         return comment_laptop_appearance_mark;
     }
 

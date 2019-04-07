@@ -8,11 +8,11 @@ public class Comment2Phone {
     private Date comment_phone_time;
     private String comment_phone_context;
     private String comment_phone_replyto_name;//回复给的人的名字，形式：“@_name”
-    private int comment_phone_price_mark;//性价比评分 0-5
-    private int comment_phone_screen_mark;
-    private int comment_phone_fluency_mark;
-    private int comment_phone_battery_mark;
-    private int comment_phone_camera_mark;
+    private double comment_phone_price_mark;//性价比评分 0-5
+    private double comment_phone_screen_mark;
+    private double comment_phone_fluency_mark;
+    private double comment_phone_battery_mark;
+    private double comment_phone_camera_mark;
 
     public String getComment_phone_commentor() {
         return comment_phone_commentor;
@@ -54,7 +54,7 @@ public class Comment2Phone {
         this.comment_phone_replyto_name = comment_phone_replyto_name;
     }
 
-    public int getComment_phone_price_mark() {
+    public double getComment_phone_price_mark() {
         return comment_phone_price_mark;
     }
 
@@ -62,7 +62,7 @@ public class Comment2Phone {
         this.comment_phone_price_mark = comment_phone_price_mark;
     }
 
-    public int getComment_phone_screen_mark() {
+    public double getComment_phone_screen_mark() {
         return comment_phone_screen_mark;
     }
 
@@ -70,7 +70,7 @@ public class Comment2Phone {
         this.comment_phone_screen_mark = comment_phone_screen_mark;
     }
 
-    public int getComment_phone_fluency_mark() {
+    public double getComment_phone_fluency_mark() {
         return comment_phone_fluency_mark;
     }
 
@@ -78,7 +78,7 @@ public class Comment2Phone {
         this.comment_phone_fluency_mark = comment_phone_fluency_mark;
     }
 
-    public int getComment_phone_battery_mark() {
+    public double getComment_phone_battery_mark() {
         return comment_phone_battery_mark;
     }
 
@@ -86,7 +86,7 @@ public class Comment2Phone {
         this.comment_phone_battery_mark = comment_phone_battery_mark;
     }
 
-    public int getComment_phone_camera_mark() {
+    public double getComment_phone_camera_mark() {
         return comment_phone_camera_mark;
     }
 

@@ -8,11 +8,11 @@ public class Comment2Panel {
     private Date comment_panel_time;
     private String comment_panel_context;
     private String comment_panel_replyto_name;
-    private int comment_panel_price_mark;
-    private int comment_panel_screen_mark;
-    private int comment_panel_workspeed_mark;
-    private int comment_panel_battery_mark;
-    private int comment_panel_appearance_mark;
+    private double comment_panel_price_mark;
+    private double comment_panel_screen_mark;
+    private double comment_panel_workspeed_mark;
+    private double comment_panel_battery_mark;
+    private double comment_panel_appearance_mark;
 
     public String getComment_panel_commentor() {
         return comment_panel_commentor;
@@ -54,7 +54,7 @@ public class Comment2Panel {
         this.comment_panel_replyto_name = comment_panel_replyto_name;
     }
 
-    public int getComment_panel_price_mark() {
+    public double getComment_panel_price_mark() {
         return comment_panel_price_mark;
     }
 
@@ -62,7 +62,7 @@ public class Comment2Panel {
         this.comment_panel_price_mark = comment_panel_price_mark;
     }
 
-    public int getComment_panel_screen_mark() {
+    public double getComment_panel_screen_mark() {
         return comment_panel_screen_mark;
     }
 
@@ -70,7 +70,7 @@ public class Comment2Panel {
         this.comment_panel_screen_mark = comment_panel_screen_mark;
     }
 
-    public int getComment_panel_workspeed_mark() {
+    public double getComment_panel_workspeed_mark() {
         return comment_panel_workspeed_mark;
     }
 
@@ -78,7 +78,7 @@ public class Comment2Panel {
         this.comment_panel_workspeed_mark = comment_panel_workspeed_mark;
     }
 
-    public int getComment_panel_battery_mark() {
+    public double getComment_panel_battery_mark() {
         return comment_panel_battery_mark;
     }
 
@@ -86,7 +86,7 @@ public class Comment2Panel {
         this.comment_panel_battery_mark = comment_panel_battery_mark;
     }
 
-    public int getComment_panel_appearance_mark() {
+    public double getComment_panel_appearance_mark() {
         return comment_panel_appearance_mark;
     }
 
