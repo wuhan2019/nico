@@ -18,4 +18,26 @@
         INSERT INTO userinfo (user_phone, user_name, user_sex, user_password)
         VALUES (#{user.user_phone}, #{user.user_name}, #{user.user_sex}, #{user.user_password});
     </insert>
+    
+    <!--//全局搜索商品，就像淘宝主页的搜索功能,这个key可以like name、type
+    List<String> search_globle(String key);-->
+    <select id="search_globle" parameterType="string">
+        select gpu_name from gpuinfo where gpu_name like key or gpu_type like key
+        union all
+        select headset_name from headsetinfo where headset_name like key or headset_type like key
+        union all
+        select keyboard_name from keyboardinfo where keyboard_name like key or keyboard_type like key
+        union all
+        select laptop_name from laptopinfo where laptop_name like key or laptop_type like key
+        union all
+        select memmory_name from memmoryinfo where memmory_name like key or memmory_type like key
+        union all
+        select mouse_name from mouseinfo where mouse_name like key or mouse_type like key
+        union all
+        select panel_name from panelinfo where panel_name like key or panel_type like key
+        union all
+        select phone_name from phoneinfo where phone_name like key or phone_type like key
+        union all
+        select ssd_name from ssdinfo where ssd_name like key or ssd_type like key
+    </select>
 </mapper>

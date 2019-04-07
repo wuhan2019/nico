@@ -20,4 +20,6 @@ public class UserService {
     public void putUser(User user){
         userMapper.putUser(user);
     }
+
+    //全局搜索
 }

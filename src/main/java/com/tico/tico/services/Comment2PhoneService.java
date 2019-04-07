@@ -14,4 +14,22 @@ public class Comment2PhoneService {
     public List<Comment2Phone> getAll(){
         return comment2PhoneMapper.getAll();
     }
+    public List<Comment2Phone> getByName(String name){
+        return comment2PhoneMapper.getByName(name);
+    }
+    public double price_mark(String name){
+        return comment2PhoneMapper.price_mark(name);
+    }
+    public double screen_mark(String name){
+        return comment2PhoneMapper.screen_mark(name);
+    }
+    public double fluency_mark(String name){
+        return comment2PhoneMapper.fluency_mark(name);
+    }
+    public double battery_mark(String name){
+        return comment2PhoneMapper.battery_mark(name);
+    }
+    public double camera_mark(String name){
+        return comment2PhoneMapper.camera_mark(name);
+    }
 }

@@ -17,6 +17,7 @@ public class UserController {
 
     @Autowired
     UserService userService;
+
     @ResponseBody
     @RequestMapping("/user")
     public List<User> user(){

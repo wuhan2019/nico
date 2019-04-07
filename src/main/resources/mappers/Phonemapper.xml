@@ -7,4 +7,28 @@
     <select id="getAll" resultType="com.tico.tico.entities.Phone">
     select * from phoneinfo
     </select>
+    <!--Phone getPhoneByName(String name);-->
+    <select id="getPhoneByName" resultType="com.tico.tico.entities.Phone">
+        select * from phoneinfo where phone_name=#{name}
+    </select>
+    <!--//通过手机brand获取手机
+    List<Phone> getPhonesLikeBrand(String brand);
+    //通过手机type获取手机
+    List<Phone> getPhonesLikeType(String type);
+    //通过手机brand和type获取手机
+    List<Phone> getPhonesLikeBrandAndType(String brand,String type);-->
+    <select id="getPhonesLikeBrand" resultType="com.tico.tico.entities.Phone">
+        select * from phoneinfo where phone_brand=#{brand}
+    </select>
+    <select id="getPhonesLikeType" resultType="com.tico.tico.entities.Phone">
+        select * from phoneinfo where phone_type like "%"#{type}"%"
+    </select>
+    <select id="getPhonesLikeBrandAndType" resultType="com.tico.tico.entities.Phone">
+        select * from phoneinfo where phone_brand=#{brand} and phone_type like "%"#{type}"%"
+    </select>
+    <!--//通过关键词查找相关的手机
+    List<Phone> searchPhone(String key);-->
+    <select id="searchPhone" resultType="com.tico.tico.entities.Phone">
+        select * from phoneinfo where phone_name like "%"#{key}"%" or phone_type like "%"#{key}"%"
+    </select>
 </mapper>

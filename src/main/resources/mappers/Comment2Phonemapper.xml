@@ -5,6 +5,32 @@
 <mapper namespace="com.tico.tico.mapper.Comment2PhoneMapper">
     <!--   List<Comment2Phone> getAll();-->
     <select id="getAll" resultType="com.tico.tico.entities.Comment2Phone">
-    select * from comment_phone
+    select * from comment_phone order by comment_time DESC
+    </select>
+    <!--List<Comment2Phone> getByName(String name);-->
+    <select id="getByName" resultType="com.tico.tico.entities.Comment2Phone">
+        select * from comment_phone where comment_phone_commentby=#{name}
+        order by comment_phone_time desc
+    </select>
+    <!--double price_mark();-->
+    <select id="price_mark" resultType="double">
+        select avg(comment_phone_price_mark) from comment_phone
+        where comment_phone_commentby=#{name}
+    </select>
+    <select id="screen_mark" resultType="double">
+        select avg(comment_phone_screen_mark) from comment_phone
+        where comment_phone_commentby=#{name}
+    </select>
+    <select id="fluency_mark" resultType="double">
+        select avg(comment_phone_fluency_mark) from comment_phone
+        where comment_phone_commentby=#{name}
+    </select>
+    <select id="battery_mark" resultType="double">
+        select avg(comment_phone_battery_mark) from comment_phone
+        where comment_phone_commentby=#{name}
+    </select>
+    <select id="camera_mark" resultType="double">
+        select avg(comment_phone_camera_mark) from comment_phone
+        where comment_phone_commentby=#{name}
     </select>
 </mapper>
