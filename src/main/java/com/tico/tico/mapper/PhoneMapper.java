@@ -3,9 +3,11 @@ package com.tico.tico.mapper;
 import com.tico.tico.entities.Phone;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 @Mapper
 public interface PhoneMapper {
     //所有手机
