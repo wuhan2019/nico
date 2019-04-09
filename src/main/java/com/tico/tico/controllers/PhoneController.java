@@ -8,15 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.websocket.server.PathParam;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -131,4 +129,35 @@ public class PhoneController {
 
         return "/success";
     }
+
+    //来到新增评论
+    @GetMapping("/addPhoneComment/{phone_name}")
+    public String addPhoneComment(@PathVariable("phone_name") String phone_name,Model model){
+        //把要评论的手机先存起来
+        model.addAttribute("phone_name",phone_name);
+        //去填写评论信息页面
+        return "/success";
+    }
+    //把评论信息打包发到数据库
+    @PostMapping("/newPhoneComment")
+    public String newPhoneComment(@RequestParam("comment_phone_context") String comment_phone_context,
+                                  @RequestParam("comment_phone_price_mark") Double comment_phone_price_mark,
+                                  @RequestParam("comment_phone_screen_mark") Double comment_phone_screen_mark,
+                                  @RequestParam("comment_phone_fluency_mark") Double comment_phone_fluency_mark,
+                                  @RequestParam("comment_phone_battery_mark") Double comment_phone_battery_mark,
+                                  @RequestParam("comment_phone_camera_mark") Double comment_phone_camera_mark,
+                                  @RequestParam("comment_phone_commentby") String comment_phone_commentby,
+                                  HttpServletRequest request){
+
+        String comment_phone_commentor = (String) request.getSession().getAttribute("user_name");
+        Date comment_phone_time = new Date();
+        Comment2Phone comment2Phone = new Comment2Phone(comment_phone_commentor,
+                comment_phone_commentby,comment_phone_time,comment_phone_context,comment_phone_price_mark,
+                comment_phone_screen_mark,comment_phone_fluency_mark,comment_phone_battery_mark,
+                comment_phone_camera_mark);
+        //插入数据库，注意 ： 评论表中的coment_phone_replyto_name不要了。
+        comment2PhoneService.addPhoneComment(comment2Phone);
+        return "/success";
+    }
+
 }

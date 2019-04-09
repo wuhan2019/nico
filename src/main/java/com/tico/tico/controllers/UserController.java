@@ -54,7 +54,7 @@ public class UserController {
     }
 
     @PostMapping("/user/signup")
-    public String login(User user,Map<String,Object> map){
+    public String signup(User user,Map<String,Object> map){
         if(userService.getPasswordByName(user.getUser_name())!=null){//用户已经存在
             map.put("userExist","该名字已经被使用，请更换！");
             return "signup";

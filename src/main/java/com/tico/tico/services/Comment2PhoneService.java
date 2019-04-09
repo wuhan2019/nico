@@ -32,4 +32,8 @@ public class Comment2PhoneService {
     public double camera_mark(String name){
         return comment2PhoneMapper.camera_mark(name);
     }
+
+    public void addPhoneComment(Comment2Phone comment2Phone){
+        comment2PhoneMapper.addPhoneComment(comment2Phone);
+    }
 }

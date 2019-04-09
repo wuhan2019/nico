@@ -2,6 +2,7 @@ package com.tico.tico.mapper;
 
 import com.tico.tico.entities.Comment2Phone;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -18,4 +19,6 @@ public interface Comment2PhoneMapper {
     double fluency_mark(String name);
     double battery_mark(String name);
     double camera_mark(String name);
+    //插入一条评论
+    void addPhoneComment(@Param("phoneComment")Comment2Phone phoneComment);
 }

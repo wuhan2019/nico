@@ -14,6 +14,18 @@ public class Comment2Phone {
     private double comment_phone_battery_mark;
     private double comment_phone_camera_mark;
 
+    public Comment2Phone(String comment_phone_commentor, String comment_phone_commentby, Date comment_phone_time, String comment_phone_context, double comment_phone_price_mark, double comment_phone_screen_mark, double comment_phone_fluency_mark, double comment_phone_battery_mark, double comment_phone_camera_mark) {
+        this.comment_phone_commentor = comment_phone_commentor;
+        this.comment_phone_commentby = comment_phone_commentby;
+        this.comment_phone_time = comment_phone_time;
+        this.comment_phone_context = comment_phone_context;
+        this.comment_phone_price_mark = comment_phone_price_mark;
+        this.comment_phone_screen_mark = comment_phone_screen_mark;
+        this.comment_phone_fluency_mark = comment_phone_fluency_mark;
+        this.comment_phone_battery_mark = comment_phone_battery_mark;
+        this.comment_phone_camera_mark = comment_phone_camera_mark;
+    }
+
     public String getComment_phone_commentor() {
         return comment_phone_commentor;
     }

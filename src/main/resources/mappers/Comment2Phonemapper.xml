@@ -33,4 +33,17 @@
         select avg(comment_phone_camera_mark) from comment_phone
         where comment_phone_commentby=#{name}
     </select>
+
+    <!--void addPhoneComment(@Param("phoneComment")Comment2Phone phoneComment);-->
+    <insert id="addPhoneComment" parameterType="com.tico.tico.entities.Comment2Phone">
+        insert into comment_phone(comment_phone_commentor,comment_phone_commentby,comment_phone_time,
+        comment_phone_context,comment_phone_price_mark,comment_phone_screen_mark,comment_phone_fluency_mark,
+        comment_phone_battery_mark,comment_phone_camera_mark)
+        values(#{phoneComment.comment_phone_commentor},#{phoneComment.comment_phone_commentby},
+        #{phoneComment.comment_phone_time},#{phoneComment.comment_phone_context},
+        #{phoneComment.comment_phone_price_mark},#{phoneComment.comment_phone_screen_mark},
+        #{phoneComment.comment_phone_fluency_mark},#{phoneComment.comment_phone_battery_mark},
+        #{phoneComment.comment_phone_camera_mark})
+    </insert>
+
 </mapper>
