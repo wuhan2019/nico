@@ -7,4 +7,21 @@
     <select id="getAll" resultType="com.tico.tico.entities.Panel">
     select * from panelinfo
     </select>
+
+    <select id="getPanelByName" resultType="com.tico.tico.entities.Panel">
+        select * from panelinfo where panel_name=#{name}
+    </select>
+
+    <select id="getPanelLikeBrand" resultType="com.tico.tico.entities.Panel">
+        select * from panelinfo where panel_brand=#{brand}
+    </select>
+    <select id="getPanelLikeType" resultType="com.tico.tico.entities.Panel">
+        select * from panelinfo where panel_type like "%"#{type}"%"
+    </select>
+    <select id="getPanelLikeBrandAndType" resultType="com.tico.tico.entities.Panel">
+        select * from panelinfo where panel_brand=#{brand} and panel_type like "%"#{type}"%"
+    </select>
+    <select id="searchPanel" resultType="com.tico.tico.entities.Panel">
+        select * from panelinfo where panel_name like "%"#{key}"%" or panel_type like "%"#{key}"%"
+    </select>
 </mapper>

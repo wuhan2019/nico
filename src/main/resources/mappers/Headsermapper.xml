@@ -7,4 +7,21 @@
     <select id="getAll" resultType="com.tico.tico.entities.Headset">
     select * from headsetinfo
     </select>
+
+    <select id="getHeadsetByName" resultType="com.tico.tico.entities.Headset">
+        select * from headsetinfo where headset_name=#{name}
+    </select>
+
+    <select id="getHeadsetLikeBrand" resultType="com.tico.tico.entities.Headset">
+        select * from headsetinfo where headset_brand=#{brand}
+    </select>
+    <select id="getHeadsetLikeType" resultType="com.tico.tico.entities.Headset">
+        select * from headsetinfo where headset_type like "%"#{type}"%"
+    </select>
+    <select id="getHeadsetLikeBrandAndType" resultType="com.tico.tico.entities.Headset">
+        select * from headsetinfo where headset_brand=#{brand} and headset_type like "%"#{type}"%"
+    </select>
+    <select id="searchHeadset" resultType="com.tico.tico.entities.Headset">
+        select * from headsetinfo where headset_name like "%"#{key}"%" or headset_type like "%"#{key}"%"
+    </select>
 </mapper>

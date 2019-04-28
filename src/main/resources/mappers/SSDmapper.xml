@@ -7,4 +7,21 @@
     <select id="getAll" resultType="com.tico.tico.entities.SSD">
     select * from ssdinfo
     </select>
+
+    <select id="getSSDByName" resultType="com.tico.tico.entities.SSD">
+        select * from ssdinfo where ssd_name=#{name}
+    </select>
+
+    <select id="getSSDLikeBrand" resultType="com.tico.tico.entities.SSD">
+        select * from ssdinfo where ssd_brand=#{brand}
+    </select>
+    <select id="getSSDLikeType" resultType="com.tico.tico.entities.SSD">
+        select * from ssdinfo where ssd_type like "%"#{type}"%"
+    </select>
+    <select id="getSSDLikeBrandAndType" resultType="com.tico.tico.entities.SSD">
+        select * from ssdinfo where ssd_brand=#{brand} and ssd_type like "%"#{type}"%"
+    </select>
+    <select id="searchSSD" resultType="com.tico.tico.entities.SSD">
+        select * from ssdinfo where ssd_name like "%"#{key}"%" or ssd_type like "%"#{key}"%"
+    </select>
 </mapper>

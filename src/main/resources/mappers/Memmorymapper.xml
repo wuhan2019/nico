@@ -7,4 +7,26 @@
     <select id="getAll" resultType="com.tico.tico.entities.Memmory">
     select * from memmoryinfo
     </select>
+
+    <!--Memmory getMemmoryByName(String name);-->
+    <!--List<Memmory> getMemmoryLikeBrand(String brand);-->
+    <!--List<Memmory> getMemmoryLikeType(String type);-->
+    <!--List<Memmory> getMemmoryLikeBrandAndType(@Param("brand") String brand, @Param("type") String type);-->
+    <!--List<Memmory> searchMemmory(String key);-->
+    <select id="getMemmoryByName" resultType="com.tico.tico.entities.Memmory">
+        select * from memmoryinfo where memmory_name=#{name}
+    </select>
+
+    <select id="getMemmoryLikeBrand" resultType="com.tico.tico.entities.Memmory">
+        select * from memmoryinfo where memmory_brand=#{brand}
+    </select>
+    <select id="getMemmoryLikeType" resultType="com.tico.tico.entities.Memmory">
+        select * from memmoryinfo where memmory_type like "%"#{type}"%"
+    </select>
+    <select id="getMemmoryLikeBrandAndType" resultType="com.tico.tico.entities.Memmory">
+        select * from memmoryinfo where memmory_brand=#{brand} and memmory_type like "%"#{type}"%"
+    </select>
+    <select id="searchMemmory" resultType="com.tico.tico.entities.Memmory">
+        select * from memmoryinfo where memmory_name like "%"#{key}"%" or memmory_type like "%"#{key}"%"
+    </select>
 </mapper>

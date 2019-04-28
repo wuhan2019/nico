@@ -42,7 +42,7 @@ public class Phone {
     private String phone_video;
     //京东购买链接
     private String phone_buylink;
-    //图片地址，多个图片路径用“：”分开解析
+    //图片地址，多个图片路径用“##”分开解析
     private String phone_pic;
 
     public String getPhone_name() {

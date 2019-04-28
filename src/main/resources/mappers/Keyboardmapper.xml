@@ -7,4 +7,22 @@
     <select id="getAll" resultType="com.tico.tico.entities.Keyboard">
     select * from keyboardinfo
     </select>
+
+
+    <select id="getKeyboardByName" resultType="com.tico.tico.entities.Keyboard">
+        select * from keyboardinfo where keyboard_name=#{name}
+    </select>
+
+    <select id="getKeyboardLikeBrand" resultType="com.tico.tico.entities.Keyboard">
+        select * from keyboardinfo where keyboard_brand=#{brand}
+    </select>
+    <select id="getKeyboardLikeType" resultType="com.tico.tico.entities.Keyboard">
+        select * from keyboardinfo where keyboard_type like "%"#{type}"%"
+    </select>
+    <select id="getKeyboardLikeBrandAndType" resultType="com.tico.tico.entities.Keyboard">
+        select * from keyboardinfo where keyboard_brand=#{brand} and keyboard_type like "%"#{type}"%"
+    </select>
+    <select id="searchKeyboard" resultType="com.tico.tico.entities.Keyboard">
+        select * from keyboardinfo where keyboard_name like "%"#{key}"%" or keyboard_type like "%"#{key}"%"
+    </select>
 </mapper>

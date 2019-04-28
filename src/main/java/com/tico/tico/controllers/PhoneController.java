@@ -152,7 +152,7 @@ public class PhoneController {
                 comment_phone_commentby,comment_phone_time,comment_phone_context,comment_phone_price_mark,
                 comment_phone_screen_mark,comment_phone_fluency_mark,comment_phone_battery_mark,
                 comment_phone_camera_mark);
-        //插入数据库，注意 ： 评论表中的coment_phone_replyto_name不要了。
+        //插入数据库，注意 ： 评论表中的coment_phode_replyto_name不要了。
         comment2PhoneService.addPhoneComment(comment2Phone);
         return "/success";
     }

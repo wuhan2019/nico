@@ -7,4 +7,22 @@
     <select id="getAll" resultType="com.tico.tico.entities.Laptop">
     select * from laptopinfo
     </select>
+
+
+    <select id="getLaptopByName" resultType="com.tico.tico.entities.Laptop">
+        select * from laptopinfo where laptop_name=#{name}
+    </select>
+
+    <select id="getLaptopLikeBrand" resultType="com.tico.tico.entities.Laptop">
+        select * from laptopinfo where laptop_brand=#{brand}
+    </select>
+    <select id="getLaptopLikeType" resultType="com.tico.tico.entities.Laptop">
+        select * from laptopinfo where laptop_type like "%"#{type}"%"
+    </select>
+    <select id="getLaptopLikeBrandAndType" resultType="com.tico.tico.entities.Laptop">
+        select * from laptopinfo where laptop_brand=#{brand} and laptop_type like "%"#{type}"%"
+    </select>
+    <select id="searchLaptop" resultType="com.tico.tico.entities.Laptop">
+        select * from laptopinfo where laptop_name like "%"#{key}"%" or laptop_type like "%"#{key}"%"
+    </select>
 </mapper>

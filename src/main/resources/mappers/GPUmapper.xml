@@ -7,4 +7,27 @@
     <select id="getAll" resultType="com.tico.tico.entities.GPU">
     select * from gpuinfo
     </select>
+
+    <!--GPU getGPUByName(String name);-->
+    <!--List<GPU> getGPULikeBrand(String brand);-->
+    <!--List<GPU> getGPULikeType(String type);-->
+    <!--List<GPU> getGPULikeBrandAndType(@Param("brand") String brand, @Param("type") String type);-->
+    <!--List<GPU> searchGPU(String key);-->
+
+    <select id="getGPUByName" resultType="com.tico.tico.entities.GPU">
+        select * from gpuinfo where gpu_name=#{name}
+    </select>
+
+    <select id="getGPULikeBrand" resultType="com.tico.tico.entities.GPU">
+        select * from gpuinfo where gpu_brand=#{brand}
+    </select>
+    <select id="getGPULikeType" resultType="com.tico.tico.entities.GPU">
+        select * from gpuinfo where gpu_type like "%"#{type}"%"
+    </select>
+    <select id="getGPULikeBrandAndType" resultType="com.tico.tico.entities.GPU">
+        select * from gpuinfo where gpu_brand=#{brand} and gpu_type like "%"#{type}"%"
+    </select>
+    <select id="searchGPU" resultType="com.tico.tico.entities.GPU">
+        select * from gpuinfo where gpu_name like "%"#{key}"%" or gpu_type like "%"#{key}"%"
+    </select>
 </mapper>

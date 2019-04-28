@@ -7,4 +7,21 @@
     <select id="getAll" resultType="com.tico.tico.entities.Mouse">
     select * from mouseinfo
     </select>
+
+    <select id="getMouseByName" resultType="com.tico.tico.entities.Mouse">
+        select * from mouseinfo where mouse_name=#{name}
+    </select>
+
+    <select id="getMouseLikeBrand" resultType="com.tico.tico.entities.Mouse">
+        select * from mouseinfo where mouse_brand=#{brand}
+    </select>
+    <select id="getMouseLikeType" resultType="com.tico.tico.entities.Mouse">
+        select * from mouseinfo where mouse_type like "%"#{type}"%"
+    </select>
+    <select id="getMouseLikeBrandAndType" resultType="com.tico.tico.entities.Mouse">
+        select * from mouseinfo where mouse_brand=#{brand} and mouse_type like "%"#{type}"%"
+    </select>
+    <select id="searchMouse" resultType="com.tico.tico.entities.Mouse">
+        select * from mouseinfo where mouse_name like "%"#{key}"%" or mouse_type like "%"#{key}"%"
+    </select>
 </mapper>
