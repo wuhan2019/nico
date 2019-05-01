@@ -15,6 +15,7 @@ public class MyWebMVCConfig implements WebMvcConfigurer {
         registry.addViewController("/signup").setViewName("signup");//注册页面
     }
 
+    //fff
     //拦截器，后面再加
 //    @Override
 //    public void addInterceptors(InterceptorRegistry registry) {
