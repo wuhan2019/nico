@@ -11,6 +11,7 @@ import java.util.List;
 public class PhoneService {
     @Autowired
     PhoneMapper phoneMapper;
+    
     public List<Phone> getAll(){
         return phoneMapper.getAll();
     }

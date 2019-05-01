@@ -17,4 +17,5 @@ public interface MemmoryMapper {
     List<Memmory> getMemmoryLikeType(String type);
     List<Memmory> getMemmoryLikeBrandAndType(@Param("brand") String brand, @Param("type") String type);
     List<Memmory> searchMemmory(String key);
+
 }
