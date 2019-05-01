@@ -15,4 +15,10 @@ public class PanelService {
     public List<Panel> getAll(){
         return panelMapper.getAll();
     }
+    public Panel getPanelByName(String name){return panelMapper.getPanelByName(name);}
+    public  List<Panel> getPanelLikeBrand(String brand){return panelMapper.getPanelLikeBrand(brand);}
+    public List<Panel> getPanelLikeType(String type){return panelMapper.getPanelLikeType(type);}
+    public  List<Panel> getPanelLikeBrandAndType( String brand, String type){return panelMapper.getPanelLikeBrandAndType(brand, type);}
+    public  List<Panel> searchPanel(String key){return panelMapper.searchPanel(key);}
+
 }

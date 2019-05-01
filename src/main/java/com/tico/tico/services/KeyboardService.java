@@ -14,4 +14,11 @@ public class KeyboardService {
     public List<Keyboard> getAll(){
         return keyboardMapper.getAll();
     }
+    public Keyboard getKeyboardByName(String name){return keyboardMapper.getKeyboardByName(name);}
+    public List<Keyboard> getKeyboardLikeBrand(String brand){return keyboardMapper.getKeyboardLikeBrand(brand);}
+    public  List<Keyboard> getKeyboardLikeType(String type){return keyboardMapper.getKeyboardLikeType(type);}
+    public  List<Keyboard> getKeyboardLikeBrandAndType( String brand,  String type){return keyboardMapper.getKeyboardLikeBrandAndType(brand, type);}
+    public List<Keyboard> searchKeyboard(String key){return keyboardMapper.searchKeyboard(key);}
+
+
 }

@@ -14,4 +14,10 @@ public class HeadsetService {
     public List<Headset> getAll(){
         return headsetMapper.getAll();
     }
+    public Headset getHeadsetByName(String name){return headsetMapper.getHeadsetByName(name);}
+    public List<Headset> getHeadsetLikeBrand(String brand){return headsetMapper.getHeadsetLikeBrand(brand);}
+    public  List<Headset> getHeadsetLikeType(String type){return  headsetMapper.getHeadsetLikeType(type);}
+    public  List<Headset> getHeadsetLikeBrandAndType( String brand, String type){return headsetMapper.getHeadsetLikeBrandAndType(brand,type);}
+    public  List<Headset> searchHeadset(String key){return headsetMapper.searchHeadset(key);}
+
 }

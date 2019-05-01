@@ -14,4 +14,11 @@ public class LaptopService {
     public List<Laptop> getAll(){
         return laptopMapper.getAll();
     }
+    public  Laptop getLaptopByName(String name){return laptopMapper.getLaptopByName(name);}
+    public List<Laptop> getLaptopLikeBrand(String brand){return laptopMapper.getLaptopLikeBrand(brand);}
+    public List<Laptop> getLaptopLikeType(String type){return  laptopMapper.getLaptopLikeType(type);}
+    public  List<Laptop> getLaptopLikeBrandAndType( String brand, String type){return laptopMapper.getLaptopLikeBrandAndType(brand, type);}
+    public List<Laptop> searchLaptop(String key){return laptopMapper.searchLaptop(key);}
+
+
 }

@@ -14,4 +14,10 @@ public class SSDService {
     public List<SSD> getAll(){
         return ssdMapper.getAll();
     }
+
+    public SSD getSSDByName(String name){return ssdMapper.getSSDByName(name);}
+    public  List<SSD> getSSDLikeBrand(String brand){return ssdMapper.getSSDLikeBrand(brand);}
+    public  List<SSD> getSSDLikeType(String type){return ssdMapper.getSSDLikeType(type);}
+    public  List<SSD> getSSDLikeBrandAndType( String brand, String type){return ssdMapper.getSSDLikeBrandAndType(brand, type);}
+    public  List<SSD> searchSSD(String key){return ssdMapper.searchSSD(key);}
 }

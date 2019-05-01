@@ -14,4 +14,12 @@ public class MemmoryService {
     public List<Memmory> getAll(){
         return memmoryMapper.getAll();
     }
+    public Memmory getMemmoryByName(String name){return memmoryMapper.getMemmoryByName(name);}
+    public List<Memmory> getMemmoryLikeBrand(String brand){return memmoryMapper.getMemmoryLikeBrand(brand);}
+    public List<Memmory> getMemmoryLikeType(String type){return memmoryMapper.getMemmoryLikeType(type);}
+    public List<Memmory> getMemmoryLikeBrandAndType( String brand, String type){return memmoryMapper.getMemmoryLikeBrandAndType(brand, type);}
+    public List<Memmory> searchMemmory(String key){return memmoryMapper.searchMemmory(key);}
+
+
+
 }

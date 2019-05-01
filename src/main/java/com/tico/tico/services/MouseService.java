@@ -14,4 +14,9 @@ public class MouseService {
     public List<Mouse> getAll(){
         return mouseMapper.getAll();
     }
+    public Mouse getMouseByName(String name){return mouseMapper.getMouseByName(name);}
+    public List<Mouse> getMouseLikeBrand(String brand){return mouseMapper.getMouseLikeBrand(brand);}
+    public List<Mouse> getMouseLikeType(String type){return mouseMapper.getMouseLikeType(type);}
+    public  List<Mouse> getMouseLikeBrandAndType( String brand,  String type){return mouseMapper.getMouseLikeBrandAndType(brand, type);}
+    public  List<Mouse> searchMouse(String key){return mouseMapper.searchMouse(key);}
 }
