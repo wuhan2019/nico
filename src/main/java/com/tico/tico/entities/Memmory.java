@@ -1,6 +1,6 @@
 package com.tico.tico.entities;
 
-import javax.xml.ws.Service;
+//import javax.xml.ws.Service;
 
 public class Memmory {
     private String memmory_name;

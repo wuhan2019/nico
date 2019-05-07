@@ -3,6 +3,20 @@ package com.tico.tico.entities;
 import java.util.Date;
 
 public class Comment2Laptop {
+    public Comment2Laptop(String comment_laptop_commentor, String comment_laptop_commentby, Date comment_laptop_time, String comment_laptop_context, double comment_laptop_price_mark, double comment_laptop_screen_mark, double comment_laptop_workspeed_mark, double comment_laptop_battery_mark, double comment_laptop_radiation_mark, double comment_laptop_appearance_mark) {
+        this.comment_laptop_commentor = comment_laptop_commentor;
+        this.comment_laptop_commentby = comment_laptop_commentby;
+        this.comment_laptop_time = comment_laptop_time;
+        this.comment_laptop_context = comment_laptop_context;
+
+        this.comment_laptop_price_mark = comment_laptop_price_mark;
+        this.comment_laptop_screen_mark = comment_laptop_screen_mark;
+        this.comment_laptop_workspeed_mark = comment_laptop_workspeed_mark;
+        this.comment_laptop_battery_mark = comment_laptop_battery_mark;
+        this.comment_laptop_radiation_mark = comment_laptop_radiation_mark;
+        this.comment_laptop_appearance_mark = comment_laptop_appearance_mark;
+    }
+
     private String comment_laptop_commentor;
     private String comment_laptop_commentby;
     private Date comment_laptop_time;

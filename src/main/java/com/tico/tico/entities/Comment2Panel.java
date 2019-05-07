@@ -14,6 +14,19 @@ public class Comment2Panel {
     private double comment_panel_battery_mark;
     private double comment_panel_appearance_mark;
 
+    public Comment2Panel(String comment_panel_commentor, String comment_panel_commentby, Date comment_panel_time, String comment_panel_context,  double comment_panel_price_mark, double comment_panel_screen_mark, double comment_panel_workspeed_mark, double comment_panel_battery_mark, double comment_panel_appearance_mark) {
+        this.comment_panel_commentor = comment_panel_commentor;
+        this.comment_panel_commentby = comment_panel_commentby;
+        this.comment_panel_time = comment_panel_time;
+        this.comment_panel_context = comment_panel_context;
+
+        this.comment_panel_price_mark = comment_panel_price_mark;
+        this.comment_panel_screen_mark = comment_panel_screen_mark;
+        this.comment_panel_workspeed_mark = comment_panel_workspeed_mark;
+        this.comment_panel_battery_mark = comment_panel_battery_mark;
+        this.comment_panel_appearance_mark = comment_panel_appearance_mark;
+    }
+
     public String getComment_panel_commentor() {
         return comment_panel_commentor;
     }

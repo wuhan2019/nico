@@ -2,6 +2,7 @@ package com.tico.tico.services;
 
 import com.tico.tico.entities.Comment2Panel;
 import com.tico.tico.mapper.Comment2PanelMapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,4 +15,11 @@ public class Comment2PanelService {
     public List<Comment2Panel> getAll(){
         return comment2PanelMapper.getAll();
     }
+    public List<Comment2Panel> getByName(String name){return comment2PanelMapper.getByName(name);}
+    public double price_mark(String name){return comment2PanelMapper.price_mark(name);}
+    public double screen_mark(String name){return comment2PanelMapper.screen_mark(name);}
+    public double workspeed_mark(String name){return comment2PanelMapper.workspeed_mark(name);}
+    public double battery_mark(String name){return comment2PanelMapper.battery_mark(name);}
+    public double appearance_mark(String name){return comment2PanelMapper.appearance_mark(name);}
+    public void addPanelComment(@Param("panelComment") Comment2Panel panelComment){comment2PanelMapper.addPanelComment(panelComment);}
 }

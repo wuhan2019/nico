@@ -3,6 +3,14 @@ package com.tico.tico.entities;
 import java.util.Date;
 
 public class Comment2Peripheral {
+    public Comment2Peripheral(String comment_peripheral_commentor, String comment_peripheral_commentby, Date comment_peripheral_time, String comment_peripheral_context,  double comment_peripheral_mark) {
+        this.comment_peripheral_commentor = comment_peripheral_commentor;
+        this.comment_peripheral_commentby = comment_peripheral_commentby;
+        this.comment_peripheral_time = comment_peripheral_time;
+        this.comment_peripheral_context = comment_peripheral_context;
+        this.comment_peripheral_mark = comment_peripheral_mark;
+    }
+
     private String comment_peripheral_commentor;
     private String comment_peripheral_commentby;
     private Date comment_peripheral_time;
