@@ -7,4 +7,20 @@
     <select id="getAll" resultType="com.tico.tico.entities.Comment2Peripheral">
     select * from comment_peripheral
     </select>
+    <!--void addPeripheralComment(@Param("peripheralComment") Comment2Peripheral peripheralComment);-->
+    <select id="getByName" resultType="com.tico.tico.entities.Comment2Peripheral">
+        select * from comment_peripheral where comment_peripheral_commentby=#{name}
+        order by comment_peripheral_time desc
+    </select>
+    <select id="mark" resultType="double">
+        select avg(comment_peripheral_mark) from comment_peripheral
+        where comment_peripheral_commentby=#{name}
+    </select>
+    <insert id="addPeripheralComment" parameterType="com.tico.tico.entities.Comment2Peripheral">
+        insert into comment_peripheral(comment_peripheral_commentor,comment_peripheral_commentby,comment_peripheral_time,
+        comment_peripheral_context,comment_peripheral_mark)
+        values(#{peripheralComment.comment_peripheral_commentor},#{peripheralComment.comment_peripheral_commentby},
+        #{peripheralComment.comment_peripheral_time},#{peripheralComment.comment_peripheral_context},
+        #{peripheralComment.comment_peripheral_mark})
+    </insert>
 </mapper>

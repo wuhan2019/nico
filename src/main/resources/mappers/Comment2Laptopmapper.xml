@@ -7,4 +7,45 @@
     <select id="getAll" resultType="com.tico.tico.entities.Comment2Laptop">
     select * from comment_laptop
     </select>
+
+
+    <select id="getByName" resultType="com.tico.tico.entities.Comment2Laptop">
+        select * from comment_laptop where comment_laptop_commentby=#{name}
+        order by comment_laptop_time desc
+    </select>
+    <select id="price_mark" resultType="double">
+        select avg(comment_laptop_price_mark) from comment_laptop
+        where comment_laptop_commentby=#{name}
+    </select>
+    <select id="screen_mark" resultType="double">
+        select avg(comment_laptop_screen_mark) from comment_laptop
+        where comment_laptop_commentby=#{name}
+    </select>
+    <select id="workspeed_mark" resultType="double">
+        select avg(comment_laptop_workspeed_mark) from comment_laptop
+        where comment_laptop_commentby=#{name}
+    </select>
+    <select id="battery_mark" resultType="double">
+        select avg(comment_laptop_battery_mark) from comment_laptop
+        where comment_laptop_commentby=#{name}
+    </select>
+    <select id="radiation_mark" resultType="double">
+        select avg(comment_laptop_radiation_mark) from comment_laptop
+        where comment_laptop_commentby=#{name}
+    </select>
+    <select id="appearance_mark" resultType="double">
+        select avg(comment_laptop_appearance_mark) from comment_laptop
+        where comment_laptop_commentby=#{name}
+    </select>
+
+    <insert id="addLaptopComment" parameterType="com.tico.tico.entities.Comment2Laptop">
+        insert into comment_laptop(comment_laptop_commentor,comment_laptop_commentby,comment_laptop_time,
+        comment_laptop_context,comment_laptop_price_mark,comment_laptop_screen_mark,comment_laptop_workspeed_mark,
+        comment_laptop_battery_mark,comment_laptop_radiation_mark,comment_laptop_appearance_mark)
+        values(#{laptopComment.comment_laptop_commentor},#{laptopComment.comment_laptop_commentby},
+        #{laptopComment.comment_laptop_time},#{laptopComment.comment_laptop_context},
+        #{laptopComment.comment_laptop_price_mark},#{laptopComment.comment_laptop_screen_mark},
+        #{laptopComment.comment_laptop_workspeed_mark},#{laptopComment.comment_laptop_battery_mark},
+        #{laptopComment.comment_laptop_radiation_mark},#{laptopComment.comment_laptop_appearance_mark})
+    </insert>
 </mapper>

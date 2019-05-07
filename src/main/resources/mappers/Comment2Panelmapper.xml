@@ -7,4 +7,40 @@
     <select id="getAll" resultType="com.tico.tico.entities.Comment2Panel">
     select * from comment_panel
     </select>
+
+    <select id="getByName" resultType="com.tico.tico.entities.Comment2Panel">
+        select * from comment_panel where comment_panel_commentby=#{name}
+        order by comment_panel_time desc
+    </select>
+    <select id="price_mark" resultType="double">
+        select avg(comment_panel_price_mark) from comment_panel
+        where comment_panel_commentby=#{name}
+    </select>
+    <select id="screen_mark" resultType="double">
+        select avg(comment_panel_screen_mark) from comment_panel
+        where comment_panel_commentby=#{name}
+    </select>
+    <select id="workspeed_mark" resultType="double">
+        select avg(comment_panel_workspeed_mark) from comment_panel
+        where comment_panel_commentby=#{name}
+    </select>
+    <select id="battery_mark" resultType="double">
+        select avg(comment_panel_battery_mark) from comment_panel
+        where comment_panel_commentby=#{name}
+    </select>
+    <select id="appearance_mark" resultType="double">
+        select avg(comment_panel_appearance_mark) from comment_panel
+        where comment_panel_commentby=#{name}
+    </select>
+
+    <insert id="addPanelComment" parameterType="com.tico.tico.entities.Comment2Panel">
+        insert into comment_panel(comment_panel_commentor,comment_panel_commentby,comment_panel_time,
+        comment_panel_context,comment_panel_price_mark,comment_panel_screen_mark,comment_panel_workspeed_mark,
+        comment_panel_battery_mark,comment_panel_appearance_mark)
+        values(#{panelComment.comment_panel_commentor},#{panelComment.comment_panel_commentby},
+        #{panelComment.comment_panel_time},#{panelComment.comment_panel_context},
+        #{panelComment.comment_panel_price_mark},#{panelComment.comment_panel_screen_mark},
+        #{panelComment.comment_panel_workspeed_mark},#{panelComment.comment_panel_battery_mark},
+        #{panelComment.comment_panel_appearance_mark})
+    </insert>
 </mapper>
