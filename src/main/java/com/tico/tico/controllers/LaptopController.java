@@ -2,16 +2,13 @@ package com.tico.tico.controllers;
 
 
 import com.tico.tico.entities.Comment2Laptop;
-import com.tico.tico.entities.Comment2Panel;
 import com.tico.tico.entities.Laptop;
 import com.tico.tico.services.Comment2LaptopService;
-import com.tico.tico.services.Comment2PanelService;
 import com.tico.tico.services.LaptopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.List;

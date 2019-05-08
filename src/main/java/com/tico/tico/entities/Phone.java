@@ -1,5 +1,8 @@
 package com.tico.tico.entities;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Phone {
     private String phone_name;
     private String phone_brand;
@@ -44,6 +47,20 @@ public class Phone {
     private String phone_buylink;
     //图片地址，多个图片路径用“##”分开解析
     private String phone_pic;
+
+    public List<String> getPhone_pics() {
+        return phone_pics;
+    }
+
+    public void setPhone_pics(List<String> phone_pics) {
+        this.phone_pics = phone_pics;
+    }
+
+    private List<String> phone_pics;
+
+    public void getPics(){
+        phone_pics = Arrays.asList(phone_pic.split("##"));
+    }
 
     public String getPhone_name() {
         return phone_name;

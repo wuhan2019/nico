@@ -20,10 +20,15 @@ public class PhoneController {
     PhoneService phoneService;
     @Autowired
     Comment2PhoneService comment2PhoneService;
-    @ResponseBody
+
     @RequestMapping("/phone")
-    public List<Phone> phone(){
-        return phoneService.getAll();
+    public String phone(Model model){
+        List<Phone> phones = phoneService.getAll();
+        for (Phone phone:phones){
+            phone.getPics();
+        }
+        model.addAttribute("phones",phones);
+        return "/phone";
     }
 
     //通过phone_name获取该手机所有信息，包括评论信息

@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>NICO官网</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Electro Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+
+	<!-- Custom-Files -->
+	<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- Bootstrap css -->
+	<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- Main css -->
+	<link rel="/stylesheet" href="/css/fontawesome-all.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<link href="/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- pop-up-box -->
+	<link href="/css/menu.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- menu style -->
+	<!-- //Custom-Files -->
+
+	<!-- web fonts -->
+	<link href="/css/web1.css" rel="stylesheet">
+	<link href="/css/web2.css" rel="stylesheet">
+	<!-- //web fonts -->
+	<style>
+	#navbar-brand {
+		padding: 0;
+		font-size: .8em;
+		line-height: 45px;
+		height: 45px;
+		letter-spacing: 2px;
+	}
+	#navbar-brand span {
+		border-bottom: 2px solid #212121;
+		border-top: 2px solid #212121;
+	}
+	#navbar-brand i{
+		font-size: 2em;
+		display: inline-block;
+		color: #7f56b8;
+		vertical-align: top;
+	}
+	</style>
+
+</head>
+
+<body>
+	<!-- top-header -->
+	<div class="agile-main-top">
+		<div class="container-fluid">
+			<div class="row main-top-w3l py-2">
+				<div class="col-lg-4 header-most-top">
+					<p class="text-white text-lg-left text-center">NICO官网
+						<i class="fas fa-shopping-cart ml-1"></i>
+					</p>
+				</div>
+				<div class="col-lg-8 header-right mt-lg-0 mt-2">
+					<!-- header lists -->
+					<ul>
+						<li class="text-center border-right text-white">
+							<a class="play-icon popup-with-zoom-anim text-white" href="">
+								<i class="fas fa-map-marker mr-2"></i>武汉大学</a>
+						</li>
+						<li class="text-center border-right text-white">
+							<a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">
+								<i class="fas fa-truck mr-2"></i>994594870</a>
+						</li>
+						<li class="text-center border-right text-white">
+							<i class="fas fa-phone mr-2"></i> 131 2511 6056
+						</li>
+						
+						<li class="text-center text-white">
+							<a href="#" data-toggle="modal" data-target="#exampleModal2" class="text-white" th:text="${session.user_name}">
+								<i class="fas fa-sign-out-alt mr-2"></i>  994594870@qq.com </a>
+						</li>
+					</ul>
+					<!-- //header lists -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- header-bottom-->
+	<div class="header-bot">
+		<div class="container">
+			<div class="row header-bot_inner_wthreeinfo_header_mid">
+				<!-- logo -->
+				<div class="col-md-3 logo_agile">
+					<h1 class="text-center">
+						<a href="index.html" class="font-weight-bold font-italic" id="navbar-brand">
+							<i>N</i><span>ico</span></a>
+						</a>
+					</h1>
+				</div>
+				<!-- //logo -->
+				<!-- header-bot -->
+				<div class="col-md-9 header mt-4 mb-md-0 mb-4">
+					<div class="row">
+						<!-- search -->
+						<div class="col-10 agileits_search">
+							<form class="form-inline" action="#" method="post">
+								<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required>
+								<button class="btn my-2 my-sm-0" type="submit">搜索</button>
+							</form>
+						</div>
+						<!-- //search -->
+						<!-- cart details -->
+						<div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
+							<div class="wthreecartaits wthreecartaits2 cart cart box_1">
+								<form action="#" method="post" class="last">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="display" value="1">
+									<button class="btn w3view-cart" type="submit" name="submit" value="">
+										<i class="fas fa-cart-arrow-down"></i>
+									</button>
+								</form>
+							</div>
+						</div>
+						<!-- //cart details -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- shop locator (popup) -->
+	<!-- //header-bottom -->
+	<!-- navigation -->
+	<div class="navbar-inner">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto text-center mr-xl-5">
+						<li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
+							<a class="nav-link" href="index.html"  th:href="@{/index}">主页
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								电子产品
+							</a>
+							<div class="dropdown-menu">
+								<div class="agile_inner_drop_nav_info p-4">
+									<h5 class="mb-3">Electronics</h5>
+									<div class="row">
+										<div class="col-sm-6 multi-gd-img">
+											<ul class="multi-column-dropdown">
+												<li>
+													<a href="phone.html" th:href="@{/phone}">手机</a>
+												</li>
+												<li>
+													<a href="product.html" th:href="@{/panel}">平板</a>
+												</li>
+												<li>
+													<a href="product.html" th:href="@{/laptop}">笔记本</a>
+												</li>
+											</ul>
+										</div>
+										<div class="col-sm-6 multi-gd-img">
+											<ul class="multi-column-dropdown">
+												<li>
+													<a href="product.html" th:href="@{/mouse}">鼠标</a>
+												</li>
+												<li>
+													<a href="product.html" th:href="@{/keyboard}">键盘</a>
+												</li>
+												<li>
+													<a href="product.html" th:href="@{/headset}">耳机</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								产品配件
+							</a>
+							<div class="dropdown-menu">
+								<div class="agile_inner_drop_nav_info p-4">
+									<h5 class="mb-3">Accessories</h5>
+									<div class="row">
+										<div class="col-sm-6 multi-gd-img">
+											<ul class="multi-column-dropdown">
+												<li>
+													<a href="product2.html" th:href="@{/memmory}">内存</a>
+												</li>
+												<li>
+													<a href="product2.html"  th:href="@{/gpu}">GPU</a>
+												</li>
+											</ul>
+										</div>
+										<div class="col-sm-6 multi-gd-img">
+											<ul class="multi-column-dropdown">
+												<li>
+													<a href="product2.html" th:href="@{/ssd}">SSD</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+							<a class="nav-link" href="product.html">产品对比</a>
+						</li>
+						
+						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+							<a class="nav-link" href="about.html">关于我们</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">联系我们</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- //navigation -->
+
+	<!-- banner -->
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<!-- Indicators-->
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item item1 active">
+				<div class="container">
+					<div class="w3l-space-banner">
+						<div class="carousel-caption p-lg-5 p-sm-4 p-3">
+							<p>Get flat
+								<span>10%</span> Cashback</p>
+							<h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">The
+								<span>Big</span>
+								Sale
+							</h3>
+							<a class="button2" href="product.html">Check Now </a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item item2">
+				<div class="container">
+					<div class="w3l-space-banner">
+						<div class="carousel-caption p-lg-5 p-sm-4 p-3">
+							<p>advanced
+								<span>Wireless</span> earbuds</p>
+							<h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Best
+								<span>Headphone</span>
+							</h3>
+							<a class="button2" href="product.html">Check Now </a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item item3">
+				<div class="container">
+					<div class="w3l-space-banner">
+						<div class="carousel-caption p-lg-5 p-sm-4 p-3">
+							<p>Get flat
+								<span>10%</span> Cashback</p>
+							<h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">New
+								<span>Standard</span>
+							</h3>
+							<a class="button2" href="product.html">Check Now </a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item item4">
+				<div class="container">
+					<div class="w3l-space-banner">
+						<div class="carousel-caption p-lg-5 p-sm-4 p-3">
+							<p>Get Now
+								<span>40%</span> Discount</p>
+							<h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Today
+								<span>Discount</span>
+							</h3>
+							<a class="button2" href="product.html">Check Now </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+	<!-- //banner -->
+	
+	<!-- page -->
+	<div class="services-breadcrumb">
+		<div class="agile_inner_breadcrumb">
+			<div class="container">
+				<ul class="w3_short">
+					<li>
+						<a href="index.html">主页</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //page -->
+
+	<!-- top Products -->
+	<div class="join-w3l1 py-sm-5 py-4">
+		<div class="container py-xl-4 py-lg-2">
+	<div class="ads-grid py-sm-5 py-4">
+		<div class="container py-xl-4 py-lg-2">
+			<!-- tittle heading -->
+			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+				<span>O</span>ur
+				<span>N</span>ew
+				<span>P</span>roducts</h3>
+			<!-- //tittle heading -->
+			<div class="row">
+				<!-- product left -->
+				<div class="agileinfo-ads-display col-lg-9" >
+					<div class="wrapper">
+						<!-- first section -->
+						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4"  style="background-color:white">
+							<h3 class="heading-tittle text-center font-italic">New Brand Mobiles</h3>
+							<div class="row">
+								<div class="col-md-4 product-men mt-5">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="images/m1.jpg" alt="">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="single.html" class="link-product-add-cart">商品详情</a>
+												</div>
+											</div>
+										</div>
+										<div class="item-info-product text-center border-top mt-4">
+											<h4 class="pt-1">
+												<a href="single.html">Samsung Galaxy J7</a>
+											</h4>
+											<div class="info-product-price my-2">
+												<span class="item_price">$200.00</span>
+												<del>$280.00</del>
+											</div>
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="#" method="post">
+													<fieldset>
+														<input type="hidden" name="cmd" value="_cart" />
+														<input type="hidden" name="add" value="1" />
+														<input type="hidden" name="business" value=" " />
+														<input type="hidden" name="item_name" value="Samsung Galaxy J7" />
+														<input type="hidden" name="amount" value="200.00" />
+														<input type="hidden" name="discount_amount" value="1.00" />
+														<input type="hidden" name="currency_code" value="USD" />
+														<input type="hidden" name="return" value=" " />
+														<input type="hidden" name="cancel_return" value=" " />
+													</fieldset>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-4 product-men mt-5">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="images/m2.jpg" alt="">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="single.html" class="link-product-add-cart">商品详情</a>
+												</div>
+											</div>
+											<span class="product-new-top">New</span>
+
+										</div>
+										<div class="item-info-product text-center border-top mt-4">
+											<h4 class="pt-1">
+												<a href="single.html">OPPO A37f</a>
+											</h4>
+											<div class="info-product-price my-2">
+												<span class="item_price">$230.00</span>
+												<del>$250.00</del>
+											</div>
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="#" method="post">
+													<fieldset>
+														<input type="hidden" name="cmd" value="_cart" />
+														<input type="hidden" name="add" value="1" />
+														<input type="hidden" name="business" value=" " />
+														<input type="hidden" name="item_name" value="OPPO A37f" />
+														<input type="hidden" name="amount" value="230.00" />
+														<input type="hidden" name="discount_amount" value="1.00" />
+														<input type="hidden" name="currency_code" value="USD" />
+														<input type="hidden" name="return" value=" " />
+														<input type="hidden" name="cancel_return" value=" " />
+													</fieldset>
+												</form>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 product-men mt-5">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="images/m3.jpg" alt="">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="single.html" class="link-product-add-cart">商品详情</a>
+												</div>
+											</div>
+											<span class="product-new-top">New</span>
+
+										</div>
+										<div class="item-info-product text-center border-top mt-4">
+											<h4 class="pt-1">
+												<a href="single.html">Apple iPhone X</a>
+											</h4>
+											<div class="info-product-price my-2">
+												<span class="item_price">$280.00</span>
+												<del>$300.00</del>
+											</div>
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="#" method="post">
+													<fieldset>
+														<input type="hidden" name="cmd" value="_cart" />
+														<input type="hidden" name="add" value="1" />
+														<input type="hidden" name="business" value=" " />
+														<input type="hidden" name="item_name" value="Apple iPhone X" />
+														<input type="hidden" name="amount" value="280.00" />
+														<input type="hidden" name="discount_amount" value="1.00" />
+														<input type="hidden" name="currency_code" value="USD" />
+														<input type="hidden" name="return" value=" " />
+														<input type="hidden" name="cancel_return" value=" " />
+													</fieldset>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //first section -->
+						<!-- second section -->
+						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4"  style="background-color:white">
+							<h3 class="heading-tittle text-center font-italic">Laptops</h3>
+							<div class="row">
+								<div class="col-md-4 product-men mt-5">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="images/m4.jpg" alt="">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="single.html" class="link-product-add-cart">商品详情</a>
+												</div>
+											</div>
+										</div>
+										<div class="item-info-product text-center border-top mt-4">
+											<h4 class="pt-1">
+												<a href="single.html">Sony 80 cm (32 inches)</a>
+											</h4>
+											<div class="info-product-price my-2">
+												<span class="item_price">$320.00</span>
+												<del>$340.00</del>
+											</div>
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="#" method="post">
+													<fieldset>
+														<input type="hidden" name="cmd" value="_cart" />
+														<input type="hidden" name="add" value="1" />
+														<input type="hidden" name="business" value=" " />
+														<input type="hidden" name="item_name" value="Sony 80 cm (32 inches)" />
+														<input type="hidden" name="amount" value="320.00" />
+														<input type="hidden" name="discount_amount" value="1.00" />
+														<input type="hidden" name="currency_code" value="USD" />
+														<input type="hidden" name="return" value=" " />
+														<input type="hidden" name="cancel_return" value=" " />
+													</fieldset>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 product-men mt-5">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="images/m5.jpg" alt="">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="single.html" class="link-product-add-cart">商品详情</a>
+												</div>
+											</div>
+											<span class="product-new-top">New</span>
+
+										</div>
+										<div class="item-info-product text-center border-top mt-4">
+											<h4 class="pt-1">
+												<a href="single.html">Artis Speaker</a>
+											</h4>
+											<div class="info-product-price my-2">
+												<span class="item_price">$349.00</span>
+												<del>$399.00</del>
+											</div>
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="#" method="post">
+													<fieldset>
+														<input type="hidden" name="cmd" value="_cart" />
+														<input type="hidden" name="add" value="1" />
+														<input type="hidden" name="business" value=" " />
+														<input type="hidden" name="item_name" value="Artis Speaker" />
+														<input type="hidden" name="amount" value="349.00" />
+														<input type="hidden" name="discount_amount" value="1.00" />
+														<input type="hidden" name="currency_code" value="USD" />
+														<input type="hidden" name="return" value=" " />
+														<input type="hidden" name="cancel_return" value=" " />
+													</fieldset>
+												</form>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 product-men mt-5">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="images/m6.jpg" alt="">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="single.html" class="link-product-add-cart">商品详情</a>
+												</div>
+											</div>
+										</div>
+										<div class="item-info-product text-center border-top mt-4">
+											<h4 class="pt-1">
+												<a href="single.html">Philips Speakers</a>
+											</h4>
+											<div class="info-product-price my-2">
+												<span class="item_price">$249.00</span>
+												<del>$300.00</del>
+											</div>
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="#" method="post">
+													<fieldset>
+														<input type="hidden" name="cmd" value="_cart" />
+														<input type="hidden" name="add" value="1" />
+														<input type="hidden" name="business" value=" " />
+														<input type="hidden" name="item_name" value="Philips Speakers" />
+														<input type="hidden" name="amount" value="249.00" />
+														<input type="hidden" name="discount_amount" value="1.00" />
+														<input type="hidden" name="currency_code" value="USD" />
+														<input type="hidden" name="return" value=" " />
+														<input type="hidden" name="cancel_return" value=" " />
+													</fieldset>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //second section -->
+						<!-- third section -->
+						<div class="product-sec1 product-sec2 px-sm-5 px-3">
+							<div class="row">
+								<h3 class="col-md-4 effect-bg">Summer Carnival</h3>
+								<p class="w3l-nut-middle">Get Extra 10% Off</p>
+								<div class="col-md-8 bg-right-nut">
+									<img src="images/image1.png" alt="">
+								</div>
+							</div>
+						</div>
+						<!-- //third section -->
+						<!-- fourth section -->
+						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mt-4"  style="background-color:white">
+							<h3 class="heading-tittle text-center font-italic">Accessories</h3>
+							<div class="row">
+								<div class="col-md-4 product-men mt-5">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="images/m7.jpg" alt="">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="single.html" class="link-product-add-cart">商品详情</a>
+												</div>
+											</div>
+										</div>
+										<span class="product-new-top">New</span>
+										<div class="item-info-product text-center border-top mt-4">
+											<h4 class="pt-1">
+												<a href="single.html">Whirlpool 245</a>
+											</h4>
+											<div class="info-product-price my-2">
+												<span class="item_price">$230.00</span>
+												<del>$280.00</del>
+											</div>
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="#" method="post">
+													<fieldset>
+														<input type="hidden" name="cmd" value="_cart" />
+														<input type="hidden" name="add" value="1" />
+														<input type="hidden" name="business" value=" " />
+														<input type="hidden" name="item_name" value="Whirlpool 245" />
+														<input type="hidden" name="amount" value="230.00" />
+														<input type="hidden" name="discount_amount" value="1.00" />
+														<input type="hidden" name="currency_code" value="USD" />
+														<input type="hidden" name="return" value=" " />
+														<input type="hidden" name="cancel_return" value=" " />
+													</fieldset>
+												</form>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 product-men mt-5">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="images/m8.jpg" alt="">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="single.html" class="link-product-add-cart">商品详情</a>
+												</div>
+											</div>
+										</div>
+										<div class="item-info-product text-center border-top mt-4">
+											<h4 class="pt-1">
+												<a href="single.html">BPL Washing Machine</a>
+											</h4>
+											<div class="info-product-price my-2">
+												<span class="item_price">$180.00</span>
+												<del>$200.00</del>
+											</div>
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="#" method="post">
+													<fieldset>
+														<input type="hidden" name="cmd" value="_cart" />
+														<input type="hidden" name="add" value="1" />
+														<input type="hidden" name="business" value=" " />
+														<input type="hidden" name="item_name" value="BPL Washing Machine" />
+														<input type="hidden" name="amount" value="180.00" />
+														<input type="hidden" name="discount_amount" value="1.00" />
+														<input type="hidden" name="currency_code" value="USD" />
+														<input type="hidden" name="return" value=" " />
+														<input type="hidden" name="cancel_return" value=" " />
+													</fieldset>
+												</form>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 product-men mt-5">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="images/m9.jpg" alt="">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="single.html" class="link-product-add-cart">商品详情</a>
+												</div>
+											</div>
+										</div>
+										<div class="item-info-product text-center border-top mt-4">
+											<h4 class="pt-1">
+												<a href="single.html">Microwave Oven</a>
+											</h4>
+											<div class="info-product-price my-2">
+												<span class="item_price">$199.00</span>
+												<del>$299.00</del>
+											</div>
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="#" method="post">
+													<fieldset>
+														<input type="hidden" name="cmd" value="_cart" />
+														<input type="hidden" name="add" value="1" />
+														<input type="hidden" name="business" value=" " />
+														<input type="hidden" name="item_name" value="Microwave Oven" />
+														<input type="hidden" name="amount" value="199.00" />
+														<input type="hidden" name="discount_amount" value="1.00" />
+														<input type="hidden" name="currency_code" value="USD" />
+														<input type="hidden" name="return" value=" " />
+														<input type="hidden" name="cancel_return" value=" " />
+													</fieldset>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //fourth section -->
+					</div>
+				</div>
+				<!-- //product left -->
+
+				<!-- product right -->
+				<div class="col-lg-3 mt-lg-0 mt-4 p-lg-0">
+					<div class="side-bar p-sm-4 p-3">
+						<div class="search-hotel border-bottom py-2">
+							<h3 class="agileits-sear-head mb-3">搜索..</h3>
+							<form action="#" method="post">
+								<input type="search" placeholder="宝贝名称..." name="search" required>
+								<input type="submit" value=" ">
+							</form>
+						</div>
+						<!-- price -->
+						<div class="range border-bottom py-2">
+							<h3 class="agileits-sear-head mb-3">价格</h3>
+							<div class="w3l-range">
+								<ul>
+									<li>
+										<a href="#">低于 ¥1,000</a>
+									</li>
+									<li class="my-1">
+										<a href="#">¥1,000 - ¥2,000</a>
+									</li>
+									<li>
+										<a href="#">¥2,000 - ¥3,000</a>
+									</li>
+									<li class="my-1">
+										<a href="#">¥3,000 - ¥4,000</a>
+									</li>
+									<li>
+										<a href="#">¥4,000 - ¥5,000</a>
+									</li>
+									<li class="mt-1">
+										<a href="#">高于 ¥5,000</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //price -->
+
+						<!-- reviews -->
+						<div class="customer-rev border-bottom left-side py-2">
+							<h3 class="agileits-sear-head mb-3">评论</h3>
+							<ul>
+								<li>
+									<a href="#">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<span>5.0</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<span>4.0</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star-half"></i>
+										<span>3.5</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<span>3.0</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star-half"></i>
+										<span>2.5</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //reviews -->
+						<!-- electronics -->
+						<div class="left-side border-bottom py-2">
+							<h3 class="agileits-sear-head mb-3">产品种类</h3>
+							<ul>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">手机</span>
+								</li>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">平板</span>
+								</li>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">电脑</span>
+								</li>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">鼠标</span>
+								</li>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">键盘</span>
+								</li>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">耳机</span>
+								</li>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">内存</span>
+								</li>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">GPU</span>
+								</li>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">SSD</span>
+								</li>
+							</ul>
+						</div>
+						<!-- //electronics -->
+
+						<!-- best seller -->
+						<div class="f-grid py-2">
+							<h3 class="agileits-sear-head mb-3">销售量高</h3>
+							<div class="box-scroll">
+								<div class="scroll">
+									<div class="row">
+										<div class="col-lg-3 col-sm-2 col-3 left-mar">
+											<img src="images/k1.jpg" alt="" class="img-fluid">
+										</div>
+										<div class="col-lg-9 col-sm-10 col-9 w3_mvd">
+											<a href="">Samsung Galaxy On7 Prime (Gold, 4GB RAM + 64GB Memory)</a>
+											<a href="" class="price-mar mt-2">$12,990.00</a>
+										</div>
+									</div>
+									<div class="row my-4">
+										<div class="col-lg-3 col-sm-2 col-3 left-mar">
+											<img src="images/k2.jpg" alt="" class="img-fluid">
+										</div>
+										<div class="col-lg-9 col-sm-10 col-9 w3_mvd">
+											<a href="">Haier 195 L 4 Star Direct-Cool Single Door Refrigerator</a>
+											<a href="" class="price-mar mt-2">$12,499.00</a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-3 col-sm-2 col-3 left-mar">
+											<img src="images/k3.jpg" alt="" class="img-fluid">
+										</div>
+										<div class="col-lg-9 col-sm-10 col-9 w3_mvd">
+											<a href="">Ambrane 13000 mAh Power Bank (P-1310 Premium)</a>
+											<a href="" class="price-mar mt-2">$1,199.00 </a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-3 col-sm-2 col-3 left-mar">
+											<img src="images/k1.jpg" alt="" class="img-fluid">
+										</div>
+										<div class="col-lg-9 col-sm-10 col-9 w3_mvd">
+											<a href="">Samsung Galaxy On7 Prime (Gold, 4GB RAM + 64GB Memory)</a>
+											<a href="" class="price-mar mt-2">$12,990.00</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //best seller -->
+					</div>
+					<!-- //product right -->
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	<!-- //top products -->
+
+	<!-- middle section -->
+	<div class="join-w3l1 py-sm-5 py-4">
+		<div class="container py-xl-4 py-lg-2">
+			
+		</div>
+	</div>
+	<!-- middle section -->
+
+	<!-- footer -->
+	<footer>
+		
+		<!-- footer third section -->
+		<div class="w3l-middlefooter-sec">
+			<div class="container py-md-5 py-sm-4 py-3">
+				<div class="row footer-info w3-agileits-info">
+					<!-- footer categories -->
+					<div class="col-md-3 col-sm-6 footer-grids">
+						<h3 class="text-white font-weight-bold mb-3">产品种类</h3>
+						<ul>
+							<li class="mb-3">
+								<a href="product.html">手机 </a>
+							</li>
+							<li class="mb-3">
+								<a href="product.html">平板</a>
+							</li>
+							<li class="mb-3">
+								<a href="product.html">电脑</a>
+							</li>
+							<li class="mb-3">
+								<a href="product2.html">鼠标</a>
+							</li>
+							<li class="mb-3">
+								<a href="product.html">键盘</a>
+							</li>
+							<li>
+								<a href="product2.html">耳机</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //footer categories -->
+					<!-- quick links -->
+					<div class="col-md-3 col-sm-6 footer-grids mt-sm-0 mt-4">
+						<h3 class="text-white font-weight-bold mb-3">服务链接</h3>
+						<ul>
+							<li class="mb-3">
+								<a href="about.html">产品对比</a>
+							</li>
+							<li class="mb-3">
+								<a href="#">回到顶部</a>
+							</li>
+							<li class="mb-3">
+								<a href="contact.html">关于我们</a>
+							</li>
+							<li class="mb-3">
+								<a href="help.html">联系我们</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-6 footer-grids mt-md-0 mt-4">
+						<h3 class="text-white font-weight-bold mb-3">联系我们</h3>
+						<ul>
+							<li class="mb-3">
+								<i class="fas fa-map-marker"></i> 武汉大学信息学部</li>
+							<li class="mb-3">
+								<i class="fas fa-phone"></i> +86 131 2511 6056 </li>
+							<li class="mb-3">
+								<i class="fas fa-envelope-open"></i>
+								<a href="mailto:example@mail.com"> 994594870@qq.com</a>
+							</li>
+							<li>
+								<i class="fas fa-envelope-open"></i>
+								<a href="mailto:example@mail.com"> 2433574201@qq.com</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
+						<!-- newsletter -->
+						<h3 class="text-white font-weight-bold mb-3">内部通讯</h3>
+						<p class="mb-3">Free Delivery on your first order!</p>
+						<form action="#" method="post">
+							<div class="form-group">
+								<input type="email" class="form-control" placeholder="Email" name="email" required>
+								<input type="submit" value="Go">
+							</div>
+						</form>
+						<!-- //newsletter -->
+						<!-- social icons -->
+						<div class="footer-grids  w3l-socialmk mt-3">
+							<h3 class="text-white font-weight-bold mb-3">加入我们</h3>
+							<div class="social">
+								<ul>
+									<li>
+										<a class="icon fb" href="#">
+											<i class="fab fa-facebook-f"></i>
+										</a>
+									</li>
+									<li>
+										<a class="icon tw" href="#">
+											<i class="fab fa-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a class="icon gp" href="#">
+											<i class="fab fa-google-plus-g"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //social icons -->
+					</div>
+				</div>
+				<!-- //quick links -->
+			</div>
+		</div>
+		<!-- //footer third section -->
+
+	</footer>
+	<!-- //footer -->
+	<!-- copyright -->
+	<div class="copy-right py-3">
+		<div class="container">
+			<p class="text-center text-white">© 2019 版权所有，翻版必究</p>
+		</div>
+	</div>
+	<!-- //copyright -->
+
+	<!-- js-files -->
+	<!-- jquery -->
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<!-- //jquery -->
+
+	<!-- nav smooth scroll -->
+	<script>
+		$(document).ready(function () {
+			$(".dropdown").hover(
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+					$(this).toggleClass('open');
+				},
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+					$(this).toggleClass('open');
+				}
+			);
+		});
+	</script>
+	<!-- //nav smooth scroll -->
+
+	<!-- popup modal (for location)-->
+	<script src="js/jquery.magnific-popup.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+	<!-- //popup modal (for location)-->
+
+	<!-- cart-js -->
+	<script src="js/minicart.js"></script>
+	<script>
+		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+
+		paypals.minicarts.cart.on('checkout', function (evt) {
+			var items = this.items(),
+				len = items.length,
+				total = 0,
+				i;
+
+			// Count the number of each item in the cart
+			for (i = 0; i < len; i++) {
+				total += items[i].get('quantity');
+			}
+
+			if (total < 3) {
+				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+				evt.preventDefault();
+			}
+		});
+	</script>
+	<!-- //cart-js -->
+
+	<!-- password-script -->
+	<script>
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+	
+	<!-- scroll seller -->
+	<script src="js/scroll.js"></script>
+	<!-- //scroll seller -->
+
+	<!-- smoothscroll -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<!-- //smoothscroll -->
+
+	<!-- start-smooth-scrolling -->
+	<script src="js/move-top.js"></script>
+	<script src="js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+
+	<!-- smooth-scrolling-of-move-up -->
+	<script>
+		$(document).ready(function () {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->
+
+	<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+	<!-- //for bootstrap working -->
+	<!-- //js-files -->
+</body>
+
+</html>

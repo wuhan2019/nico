@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mobile Phones产品对比</title>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<link rel="stylesheet" href="css/style2.css"> <!-- Resource style -->
+	<style>
+	li .product selected{
+		visibility:hidden;
+	}
+	</style>
+
+</head>
+<body>
+	<section class="cd-intro">
+		<header class="htmleaf-header">
+			<h1> Mobile Phones产品对比</h1>
+		</header>
+	</section> <!-- .cd-intro -->
+
+	<section class="cd-products-comparison-table">
+		<header>
+			<h2>对比栏目</h2>
+
+			<div class="actions">
+				<a href="#0" class="reset">重置</a>
+				<a href="#0" class="filter">比较</a>
+			</div>
+		</header>
+
+		<div class="cd-products-table">
+			<div class="features">
+				<div class="top-info">手机型号</div>
+				<ul class="cd-features-list">
+					<li>品牌</li>
+					<li>价格</li>
+					<li>发行时间</li>
+					<li>系统</li>
+					<li>屏幕</li>
+					<li>屏幕尺寸</li>
+					<li>屏幕分辨率</li>
+					<li>CPU</li>
+					<li>内存</li>
+					<li>硬盘</li>
+					<li>扩展性</li>
+					<li>电池</li>
+					<li>电池容量</li>
+					<li>传感器</li>
+					<li>前置摄像头</li>
+					<li>后置摄像头</li>
+				    <li>测斜胶片</li>
+					<li>手机网络</li>
+					<li>WLAN</li>
+					<li>GPS</li>
+					<li>外观</li>
+					<li>键盘</li>
+					<li>尺寸</li>
+					<li>重量</li>
+					<li>音量</li>
+					<li>播放器</li>
+				</ul>
+			</div> <!-- .features -->
+			
+			<div class="cd-products-wrapper">
+				<ul class="cd-products-columns">
+				
+					<li class="product" th:each="p : ${phoneList}" style="display:block;">
+						<div class="top-info">
+							<button class="check" style="background:transparent;border:none"></button>
+							<img src="images/product.png" alt="product image" th:src="@{${p.phone_pic}}">
+							<h3 th:text="${p.phone_name}">Sumsung Series 1 J6300</h3>
+						</div> <!-- .top-info -->
+
+						<ul class="cd-features-list">
+							<li  th:text="${p.phone_brand}">$600</li>
+							<li  th:text="${p.phone_price}">1 Rear</li>
+							<li  th:text="${p.phone_release_time}">1080p</li>
+							<li  th:text="${p.phone_systemInfo}">LED</li>
+							<li  th:text="${p.phone_screenInfo}">47.6 inches</li>
+							<li  th:text="${p.phone_phone_screenSize}">800Hz</li>
+							<li  th:text="${p.phone_resolution}">2015</li>
+							<li  th:text="${p.phone_cpuInfo}">mpeg4</li>
+							<li  th:text="${p.phone_ramInfo}">1 Side</li>
+							<li  th:text="${p.phone_disk}">3 Port</li>
+							<li  th:text="${p.phone_extend}">1 Rear</li>
+							<li  th:text="${p.phone_battery}">1 Rear</li>
+							<li  th:text="${p.phone_batterySize}">1 Rear</li>
+							<li  th:text="${p.phone_sensor}">1 Rear</li>
+							<li  th:text="${p.phone_fcamera}">1 Rear</li>
+							<li  th:text="${p.phone_bcamera}">1 Rear</li>
+							<li  th:text="${p.phone_shotDisc}">1 Rear</li>
+							<li  th:text="${p.phone_network}">1 Rear</li>
+							<li  th:text="${p.phone_wlan}">1 Rear</li>
+							<li  th:text="${p.phone_gps}">1 Rear</li>
+							<li  th:text="${p.phone_apprearance}">1 Rear</li>
+							<li  th:text="${p.phone_keyboard}">1 Rear</li>
+							<li  th:text="${p.phone_size}">1 Rear</li>
+							<li  th:text="${p.phone_weight}">1 Rear</li>
+							<li  th:text="${p.phone_voice}">1 Rear</li>
+							<li  th:text="${p.phone_video}">1 Rear</li>
+
+						</ul>
+					</li> <!-- .product -->
+					
+
+
+
+				</ul> <!-- .cd-products-columns -->
+			</div> <!-- .cd-products-wrapper -->
+			
+			<ul class="cd-table-navigation">
+				<li><a href="#0" class="prev inactive">Prev</a></li>
+				<li><a href="#0" class="next">Next</a></li>
+			</ul>
+		</div> <!-- .cd-products-table -->
+	</section> <!-- .cd-products-comparison-table -->
+	
+	
+	<script src="js/jquery.1.7.1.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

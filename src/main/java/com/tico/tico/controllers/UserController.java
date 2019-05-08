@@ -46,7 +46,7 @@ public class UserController {
             List<String> headsetList = new ArrayList<>();session.setAttribute("headsetList",headsetList);
             List<String> gpuList = new ArrayList<>();session.setAttribute("gpuList",gpuList);
 
-            return "redirect:/success";
+            return "redirect:/index";
         }
         //登录失败处理，回到登录页面，显示错误信息
         model.put("msg","用户名密码错误");
