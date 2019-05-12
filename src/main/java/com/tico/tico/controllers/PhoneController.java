@@ -10,9 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Controller
 public class PhoneController {
@@ -96,9 +94,12 @@ public class PhoneController {
 
     //通过关键词检索手机
     @PostMapping("/searchPhone")
-    public String searchPhone(@PathVariable("key") String key,
+    public String searchPhone(@RequestParam("key") String key,
                               Model model){
         List<Phone> phones = phoneService.searchPhone(key);
+        for(Phone phone:phones){
+            phone.getPics();
+        }
         if(phones!=null){
             model.addAttribute("searchPhone",phones);
         }else{
@@ -109,17 +110,21 @@ public class PhoneController {
     }
 
     //把指定的商品加入对比队列
-    @GetMapping("addToCompare/{name}")
+    @GetMapping("/addToCompare/{name}")
     public String addToCompare(@PathVariable("name") String name,
                                Model model,HttpServletRequest request){
         List<String> phoneList = (List<String>) request.getSession().getAttribute("phoneList");
-        phoneList.add(name);
+        if(!phoneList.contains(name)){
+            phoneList.add(name);
+        }
         List<Phone> result = new ArrayList<>();
         for(String pname:phoneList){
-            result.add(phoneService.getPhoneByName(pname));
+            Phone phone = phoneService.getPhoneByName(pname);
+            phone.getPics();
+            result.add(phone);
         }
-        model.addAttribute("phoneCompare",result);
-        return "/compare";
+        model.addAttribute("phones",result);
+        return "/phoneCompare";
     }
     //进行对比
     @GetMapping("/phoneCompare")

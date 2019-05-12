@@ -16,6 +16,7 @@ public class MyWebMVCConfig implements WebMvcConfigurer {
         registry.addViewController("/phone").setViewName("phone");
         registry.addViewController("/phoneDetails").setViewName("phoneDetails");
         registry.addViewController("/phoneSearch").setViewName("phoneSearch");
+        registry.addViewController("/phoneCompare").setViewName("phoneCompare");
     }
 
 //    @Override

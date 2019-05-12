@@ -69,7 +69,7 @@ public class Comment2Phone {
         return comment_phone_price_mark;
     }
 
-    public void setComment_phone_price_mark(int comment_phone_price_mark) {
+    public void setComment_phone_price_mark(double comment_phone_price_mark) {
         this.comment_phone_price_mark = comment_phone_price_mark;
     }
 
@@ -77,7 +77,7 @@ public class Comment2Phone {
         return comment_phone_screen_mark;
     }
 
-    public void setComment_phone_screen_mark(int comment_phone_screen_mark) {
+    public void setComment_phone_screen_mark(double comment_phone_screen_mark) {
         this.comment_phone_screen_mark = comment_phone_screen_mark;
     }
 
@@ -85,7 +85,7 @@ public class Comment2Phone {
         return comment_phone_fluency_mark;
     }
 
-    public void setComment_phone_fluency_mark(int comment_phone_fluency_mark) {
+    public void setComment_phone_fluency_mark(double comment_phone_fluency_mark) {
         this.comment_phone_fluency_mark = comment_phone_fluency_mark;
     }
 
@@ -93,7 +93,7 @@ public class Comment2Phone {
         return comment_phone_battery_mark;
     }
 
-    public void setComment_phone_battery_mark(int comment_phone_battery_mark) {
+    public void setComment_phone_battery_mark(double comment_phone_battery_mark) {
         this.comment_phone_battery_mark = comment_phone_battery_mark;
     }
 
@@ -101,7 +101,7 @@ public class Comment2Phone {
         return comment_phone_camera_mark;
     }
 
-    public void setComment_phone_camera_mark(int comment_phone_camera_mark) {
+    public void setComment_phone_camera_mark(double comment_phone_camera_mark) {
         this.comment_phone_camera_mark = comment_phone_camera_mark;
     }
 }

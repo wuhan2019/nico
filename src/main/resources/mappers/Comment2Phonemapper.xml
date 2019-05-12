@@ -9,7 +9,10 @@
     </select>
     <!--List<Comment2Phone> getByName(String name);-->
     <select id="getByName" resultType="com.tico.tico.entities.Comment2Phone">
-        select * from comment_phone where comment_phone_commentby=#{name}
+        select comment_phone_commentor,comment_phone_commentby,comment_phone_context,
+        comment_phone_price_mark,comment_phone_screen_mark,
+        comment_phone_fluency_mark,comment_phone_battery_mark,comment_phone_camera_mark
+         from comment_phone where comment_phone_commentby=#{name}
     </select>
     <!--double price_mark();-->
     <select id="price_mark" resultType="Double">
