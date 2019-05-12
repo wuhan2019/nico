@@ -12,23 +12,23 @@
         select * from comment_panel where comment_panel_commentby=#{name}
         order by comment_panel_time desc
     </select>
-    <select id="price_mark" resultType="double">
+    <select id="price_mark" resultType="Double">
         select avg(comment_panel_price_mark) from comment_panel
         where comment_panel_commentby=#{name}
     </select>
-    <select id="screen_mark" resultType="double">
+    <select id="screen_mark" resultType="Double">
         select avg(comment_panel_screen_mark) from comment_panel
         where comment_panel_commentby=#{name}
     </select>
-    <select id="workspeed_mark" resultType="double">
+    <select id="workspeed_mark" resultType="Double">
         select avg(comment_panel_workspeed_mark) from comment_panel
         where comment_panel_commentby=#{name}
     </select>
-    <select id="battery_mark" resultType="double">
+    <select id="battery_mark" resultType="Double">
         select avg(comment_panel_battery_mark) from comment_panel
         where comment_panel_commentby=#{name}
     </select>
-    <select id="appearance_mark" resultType="double">
+    <select id="appearance_mark" resultType="Double">
         select avg(comment_panel_appearance_mark) from comment_panel
         where comment_panel_commentby=#{name}
     </select>

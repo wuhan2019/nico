@@ -17,20 +17,40 @@ public class Comment2PhoneService {
     public List<Comment2Phone> getByName(String name){
         return comment2PhoneMapper.getByName(name);
     }
-    public double price_mark(String name){
-        return comment2PhoneMapper.price_mark(name);
+    public Double price_mark(String name){
+        Double result = 0.0;
+        if(comment2PhoneMapper.price_mark(name)!=null){
+            result = comment2PhoneMapper.price_mark(name);
+        }
+        return result;
     }
-    public double screen_mark(String name){
-        return comment2PhoneMapper.screen_mark(name);
+    public Double screen_mark(String name){
+        Double result = 0.0;
+        if(comment2PhoneMapper.screen_mark(name)!=null){
+            result = comment2PhoneMapper.screen_mark(name);
+        }
+        return result;
     }
-    public double fluency_mark(String name){
-        return comment2PhoneMapper.fluency_mark(name);
+    public Double fluency_mark(String name){
+        Double result = 0.0;
+        if(comment2PhoneMapper.fluency_mark(name)!=null){
+            result = comment2PhoneMapper.fluency_mark(name);
+        }
+        return result;
     }
-    public double battery_mark(String name){
-        return comment2PhoneMapper.battery_mark(name);
+    public Double battery_mark(String name){
+        Double result = 0.0;
+        if(comment2PhoneMapper.battery_mark(name)!=null){
+            result = comment2PhoneMapper.battery_mark(name);
+        }
+        return result;
     }
-    public double camera_mark(String name){
-        return comment2PhoneMapper.camera_mark(name);
+    public Double camera_mark(String name){
+        Double result = 0.0;
+        if(comment2PhoneMapper.camera_mark(name)!=null){
+            result = comment2PhoneMapper.camera_mark(name);
+        }
+        return result;
     }
 
     public void addPhoneComment(Comment2Phone comment2Phone){

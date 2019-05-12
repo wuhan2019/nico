@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="zxx" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>NICO官网/手机</title>
+	<title>NICO官网/手机/搜索结果</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -284,8 +284,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container py-xl-4 py-lg-2">
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<span>M</span>obile
-				<span>P</span>hones</h3>
+				<span>S</span>earch
+				<span>R</span>esult</h3>
 			<!-- //tittle heading -->
 			<div class="row">
 				<!-- product left -->
@@ -297,7 +297,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							
 							
 							
-								<div class="col-md-4 product-men" style="margin-top:40px" th:each="p : ${phones}">
+								<div class="col-md-4 product-men" style="margin-top:40px" th:each="p : ${searchPhone}">
 									<div class="men-pro-item simpleCart_shelfItem">
 										<div class="men-thumb-item text-center" th:each="pic,pStat:${p.phone_pics}" th:if="${pStat.count}<=1">
 											<img src="images/m1.jpg" alt="" th:src="@{${pic}}" th:width="200" th:height="160" >
@@ -414,8 +414,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						
 							
 							<h3 class="agileits-sear-head mb-3">品牌</h3>
-							<form action="/searchPhone" method="post">
-								<input type="search" placeholder="Search Brand..." name="key" required="">
+							<form action="#" method="post">
+								<input type="search" placeholder="Search Brand..." name="search" required="">
 								<input type="submit" value=" ">
 							</form>
 							<div class="left-side py-2">

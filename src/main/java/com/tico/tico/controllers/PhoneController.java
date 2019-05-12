@@ -39,6 +39,7 @@ public class PhoneController {
 
 
         Phone phone = phoneService.getPhoneByName(name);
+        phone.getPics();
         //添加评论信息
         List<Comment2Phone> phoneComments = comment2PhoneService.getByName(name);
         //求出，评论里的评分的平均值，求完了放到model里
@@ -54,7 +55,7 @@ public class PhoneController {
         model.addAttribute("fluency_mark",fluency_mark);
         model.addAttribute("battery_mark",battery_mark);
         model.addAttribute("camera_mark",camera_mark);
-        return "/success";
+        return "/phoneDetails";
     }
 
     //我们按照两个标准筛选手机，“品牌”“类型”
@@ -94,26 +95,31 @@ public class PhoneController {
     }
 
     //通过关键词检索手机
-    @GetMapping("/searchPhone/{key}")
+    @PostMapping("/searchPhone")
     public String searchPhone(@PathVariable("key") String key,
                               Model model){
         List<Phone> phones = phoneService.searchPhone(key);
         if(phones!=null){
             model.addAttribute("searchPhone",phones);
         }else{
-            model.addAttribute("searchPhone"
+            model.addAttribute("searchPhoneError"
                     ,"找不到您要的商品！");
         }
-        return "/success";
+        return "/phoneSearch";
     }
 
     //把指定的商品加入对比队列
     @GetMapping("addToCompare/{name}")
     public String addToCompare(@PathVariable("name") String name,
-                               HttpServletRequest request){
+                               Model model,HttpServletRequest request){
         List<String> phoneList = (List<String>) request.getSession().getAttribute("phoneList");
         phoneList.add(name);
-        return "/success";
+        List<Phone> result = new ArrayList<>();
+        for(String pname:phoneList){
+            result.add(phoneService.getPhoneByName(pname));
+        }
+        model.addAttribute("phoneCompare",result);
+        return "/compare";
     }
     //进行对比
     @GetMapping("/phoneCompare")
@@ -149,17 +155,34 @@ public class PhoneController {
                                   @RequestParam("comment_phone_battery_mark") Double comment_phone_battery_mark,
                                   @RequestParam("comment_phone_camera_mark") Double comment_phone_camera_mark,
                                   @RequestParam("comment_phone_commentby") String comment_phone_commentby,
-                                  HttpServletRequest request){
+                                  HttpServletRequest request,Model model){
 
         String comment_phone_commentor = (String) request.getSession().getAttribute("user_name");
-        Date comment_phone_time = new Date();
         Comment2Phone comment2Phone = new Comment2Phone(comment_phone_commentor,
-                comment_phone_commentby,comment_phone_time,comment_phone_context,comment_phone_price_mark,
+                comment_phone_commentby,comment_phone_context,comment_phone_price_mark,
                 comment_phone_screen_mark,comment_phone_fluency_mark,comment_phone_battery_mark,
                 comment_phone_camera_mark);
         //插入数据库，注意 ： 评论表中的coment_phode_replyto_name不要了。
         comment2PhoneService.addPhoneComment(comment2Phone);
-        return "/success";
+
+        Phone phone = phoneService.getPhoneByName(comment_phone_commentby);
+        phone.getPics();
+        //添加评论信息
+        List<Comment2Phone> phoneComments = comment2PhoneService.getByName(comment_phone_commentby);
+        //求出，评论里的评分的平均值，求完了放到model里
+        double price_mark = comment2PhoneService.price_mark(comment_phone_commentby);
+        double screen_mark = comment2PhoneService.screen_mark(comment_phone_commentby);
+        double fluency_mark = comment2PhoneService.fluency_mark(comment_phone_commentby);
+        double battery_mark = comment2PhoneService.battery_mark(comment_phone_commentby);
+        double camera_mark = comment2PhoneService.camera_mark(comment_phone_commentby);
+        model.addAttribute("phone",phone);
+        model.addAttribute("phoneComments",phoneComments);
+        model.addAttribute("price_mark",price_mark);
+        model.addAttribute("screen_mark",screen_mark);
+        model.addAttribute("fluency_mark",fluency_mark);
+        model.addAttribute("battery_mark",battery_mark);
+        model.addAttribute("camera_mark",camera_mark);
+        return "/phoneDetails";
     }
 
 }

@@ -12,7 +12,7 @@
         select * from comment_peripheral where comment_peripheral_commentby=#{name}
         order by comment_peripheral_time desc
     </select>
-    <select id="mark" resultType="double">
+    <select id="mark" resultType="Double">
         select avg(comment_peripheral_mark) from comment_peripheral
         where comment_peripheral_commentby=#{name}
     </select>

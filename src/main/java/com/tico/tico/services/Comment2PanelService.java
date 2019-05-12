@@ -16,10 +16,10 @@ public class Comment2PanelService {
         return comment2PanelMapper.getAll();
     }
     public List<Comment2Panel> getByName(String name){return comment2PanelMapper.getByName(name);}
-    public double price_mark(String name){return comment2PanelMapper.price_mark(name);}
-    public double screen_mark(String name){return comment2PanelMapper.screen_mark(name);}
-    public double workspeed_mark(String name){return comment2PanelMapper.workspeed_mark(name);}
-    public double battery_mark(String name){return comment2PanelMapper.battery_mark(name);}
-    public double appearance_mark(String name){return comment2PanelMapper.appearance_mark(name);}
+    public Double price_mark(String name){return comment2PanelMapper.price_mark(name);}
+    public Double screen_mark(String name){return comment2PanelMapper.screen_mark(name);}
+    public Double workspeed_mark(String name){return comment2PanelMapper.workspeed_mark(name);}
+    public Double battery_mark(String name){return comment2PanelMapper.battery_mark(name);}
+    public Double appearance_mark(String name){return comment2PanelMapper.appearance_mark(name);}
     public void addPanelComment(@Param("panelComment") Comment2Panel panelComment){comment2PanelMapper.addPanelComment(panelComment);}
 }

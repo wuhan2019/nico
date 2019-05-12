@@ -5,45 +5,43 @@
 <mapper namespace="com.tico.tico.mapper.Comment2PhoneMapper">
     <!--   List<Comment2Phone> getAll();-->
     <select id="getAll" resultType="com.tico.tico.entities.Comment2Phone">
-    select * from comment_phone order by comment_time DESC
+    select * from comment_phone
     </select>
     <!--List<Comment2Phone> getByName(String name);-->
     <select id="getByName" resultType="com.tico.tico.entities.Comment2Phone">
         select * from comment_phone where comment_phone_commentby=#{name}
-        order by comment_phone_time desc
     </select>
     <!--double price_mark();-->
-    <select id="price_mark" resultType="double">
+    <select id="price_mark" resultType="Double">
         select avg(comment_phone_price_mark) from comment_phone
         where comment_phone_commentby=#{name}
     </select>
-    <select id="screen_mark" resultType="double">
+    <select id="screen_mark" resultType="Double">
         select avg(comment_phone_screen_mark) from comment_phone
         where comment_phone_commentby=#{name}
     </select>
-    <select id="fluency_mark" resultType="double">
+    <select id="fluency_mark" resultType="Double">
         select avg(comment_phone_fluency_mark) from comment_phone
         where comment_phone_commentby=#{name}
     </select>
-    <select id="battery_mark" resultType="double">
+    <select id="battery_mark" resultType="Double">
         select avg(comment_phone_battery_mark) from comment_phone
         where comment_phone_commentby=#{name}
     </select>
-    <select id="camera_mark" resultType="double">
+    <select id="camera_mark" resultType="Double">
         select avg(comment_phone_camera_mark) from comment_phone
         where comment_phone_commentby=#{name}
     </select>
 
     <!--void addPhoneComment(@Param("phoneComment")Comment2Phone phoneComment);-->
     <insert id="addPhoneComment" parameterType="com.tico.tico.entities.Comment2Phone">
-        insert into comment_phone(comment_phone_commentor,comment_phone_commentby,comment_phone_time,
+        insert into comment_phone(comment_phone_commentor,comment_phone_commentby,
         comment_phone_context,comment_phone_price_mark,comment_phone_screen_mark,comment_phone_fluency_mark,
         comment_phone_battery_mark,comment_phone_camera_mark)
         values(#{phoneComment.comment_phone_commentor},#{phoneComment.comment_phone_commentby},
-        #{phoneComment.comment_phone_time},#{phoneComment.comment_phone_context},
-        #{phoneComment.comment_phone_price_mark},#{phoneComment.comment_phone_screen_mark},
-        #{phoneComment.comment_phone_fluency_mark},#{phoneComment.comment_phone_battery_mark},
-        #{phoneComment.comment_phone_camera_mark})
+        #{phoneComment.comment_phone_context},#{phoneComment.comment_phone_price_mark},
+        #{phoneComment.comment_phone_screen_mark},#{phoneComment.comment_phone_fluency_mark},
+        #{phoneComment.comment_phone_battery_mark},#{phoneComment.comment_phone_camera_mark})
     </insert>
 
 </mapper>

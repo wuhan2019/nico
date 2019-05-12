@@ -14,6 +14,6 @@ public interface Comment2PeripheralMapper {
 
 
     List<Comment2Peripheral> getByName(String name);
-    double mark(String name);
+    Double mark(String name);
     void addPeripheralComment(@Param("peripheralComment") Comment2Peripheral peripheralComment);
 }

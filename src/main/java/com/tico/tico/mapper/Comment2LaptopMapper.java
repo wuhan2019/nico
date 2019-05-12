@@ -14,11 +14,11 @@ public interface Comment2LaptopMapper {
 
 
     List<Comment2Laptop> getByName(String name);
-    double price_mark(String name);
-    double screen_mark(String name);
-    double workspeed_mark(String name);
-    double battery_mark(String name);
-    double radiation_mark(String name);
-    double appearance_mark(String name);
+    Double price_mark(String name);
+    Double screen_mark(String name);
+    Double workspeed_mark(String name);
+    Double battery_mark(String name);
+    Double radiation_mark(String name);
+    Double appearance_mark(String name);
     void addLaptopComment(@Param("laptopComment") Comment2Laptop laptopComment);
 }

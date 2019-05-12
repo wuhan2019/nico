@@ -16,6 +16,6 @@ public class Comment2PeripheralService {
         return comment2PeripheralMapper.getAll();
     }
     public List<Comment2Peripheral> getByName(String name){return comment2PeripheralMapper.getByName(name);}
-    public double mark(String name){return comment2PeripheralMapper.mark(name);}
+    public Double mark(String name){return comment2PeripheralMapper.mark(name);}
     public void addPeripheralComment(@Param("peripheralComment") Comment2Peripheral peripheralComment){comment2PeripheralMapper.addPeripheralComment(peripheralComment);}
 }
