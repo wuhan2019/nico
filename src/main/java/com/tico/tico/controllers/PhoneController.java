@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.*;
 
 @Controller
@@ -41,11 +43,11 @@ public class PhoneController {
         //添加评论信息
         List<Comment2Phone> phoneComments = comment2PhoneService.getByName(name);
         //求出，评论里的评分的平均值，求完了放到model里
-        double price_mark = comment2PhoneService.price_mark(name);
-        double screen_mark = comment2PhoneService.screen_mark(name);
-        double fluency_mark = comment2PhoneService.fluency_mark(name);
-        double battery_mark = comment2PhoneService.battery_mark(name);
-        double camera_mark = comment2PhoneService.camera_mark(name);
+        double price_mark = new BigDecimal(comment2PhoneService.price_mark(name)).setScale(2, RoundingMode.UP).doubleValue();
+        double screen_mark = new BigDecimal(comment2PhoneService.screen_mark(name)).setScale(2,RoundingMode.UP).doubleValue();
+        double fluency_mark = new BigDecimal(comment2PhoneService.fluency_mark(name)).setScale(2,RoundingMode.UP).doubleValue();
+        double battery_mark = new BigDecimal(comment2PhoneService.battery_mark(name)).setScale(2,RoundingMode.UP).doubleValue();
+        double camera_mark = new BigDecimal(comment2PhoneService.camera_mark(name)).setScale(2,RoundingMode.UP).doubleValue();
         model.addAttribute("phone",phone);
         model.addAttribute("phoneComments",phoneComments);
         model.addAttribute("price_mark",price_mark);
@@ -175,11 +177,11 @@ public class PhoneController {
         //添加评论信息
         List<Comment2Phone> phoneComments = comment2PhoneService.getByName(comment_phone_commentby);
         //求出，评论里的评分的平均值，求完了放到model里
-        double price_mark = comment2PhoneService.price_mark(comment_phone_commentby);
-        double screen_mark = comment2PhoneService.screen_mark(comment_phone_commentby);
-        double fluency_mark = comment2PhoneService.fluency_mark(comment_phone_commentby);
-        double battery_mark = comment2PhoneService.battery_mark(comment_phone_commentby);
-        double camera_mark = comment2PhoneService.camera_mark(comment_phone_commentby);
+        double price_mark = new BigDecimal(comment2PhoneService.price_mark(comment_phone_commentby)).setScale(2, RoundingMode.UP).doubleValue();
+        double screen_mark = new BigDecimal(comment2PhoneService.screen_mark(comment_phone_commentby)).setScale(2,RoundingMode.UP).doubleValue();
+        double fluency_mark = new BigDecimal(comment2PhoneService.fluency_mark(comment_phone_commentby)).setScale(2,RoundingMode.UP).doubleValue();
+        double battery_mark = new BigDecimal(comment2PhoneService.battery_mark(comment_phone_commentby)).setScale(2,RoundingMode.UP).doubleValue();
+        double camera_mark = new BigDecimal(comment2PhoneService.camera_mark(comment_phone_commentby)).setScale(2,RoundingMode.UP).doubleValue();
         model.addAttribute("phone",phone);
         model.addAttribute("phoneComments",phoneComments);
         model.addAttribute("price_mark",price_mark);
